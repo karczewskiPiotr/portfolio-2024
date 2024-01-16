@@ -28,6 +28,8 @@ import s19 from "../../public/mgc_3.png";
 
 import s20 from "../../public/wss.png";
 import s21 from "../../public/wss_1.png";
+import Job from "@/components/Job";
+import School from "@/components/School";
 
 export default function Home() {
   return (
@@ -69,12 +71,12 @@ export default function Home() {
           education
         </a>
       </nav>
+
       <main className="grid col-start-2 col-end-12 grid-cols-10 pt-12 gap-x-5">
         <div
           role="separator"
           className="col-start-4 col-end-11 h-px w-full bg-black mb-7"
         />
-
         <div className="row-start-2 row-end-2 col-span-full z-10">
           <h1 className="font-serif text-9xl font-semibold !leading-[110%] ml-[calc(162px+theme(spacing.5))] text-black">
             Full-stack Web
@@ -109,12 +111,10 @@ export default function Home() {
             Piotr&nbsp;Karczewski
           </h2>
         </div>
-
         <div
           role="separator"
           className="col-start-1 col-end-7 h-px w-full bg-black mt-8"
         />
-
         <section className="col-start-1 col-end-5 mt-8">
           <p className="font-sans font-light text-lg">
             I’m a full-stack web developer with 3+ years of experience creating
@@ -167,7 +167,6 @@ export default function Home() {
             </button>
           </div>
         </section>
-
         <section className="col-span-full mt-32">
           <h2 className="text-9xl font-bold font-serif text-[#997651] filter-noise opacity-45 leading-[1.5]">
             Selected Work
@@ -256,7 +255,8 @@ export default function Home() {
             >
               Handbook of Visual Communication Design, a reissue of the book
               &quot;Model i metafora&quot;, available in its entirety online,
-              free of charge.
+              free of charge. Digital edition brings to life a map of text and
+              includes new illustaions and animations.
             </Project>
 
             <Project
@@ -295,7 +295,9 @@ export default function Home() {
               foregroundImages={[s15, s14]}
             >
               A desktop app that supports the editing process of web
-              publications and simplifies the git flow for redactors.
+              publications and simplifies the git flow for redactors. Tool
+              includes template generation, git integration, collaborator
+              management and more.
             </Project>
 
             <Project
@@ -329,9 +331,87 @@ export default function Home() {
               backgroundImage={s20}
               foregroundImages={[s21]}
             >
-              A desktop app that support the editing process of web publications
-              and simplify the git flow for redactors.
+              Developed a micro-frontend web spreadsheet widget in React for
+              internal usage and integration into 3rd party platforms. Used as a
+              tool for interactive data analysis and export.
             </Project>
+          </ul>
+        </section>
+
+        <section className="col-span-full mt-32">
+          <h2 className="text-9xl font-bold font-serif text-[#997651] filter-noise opacity-45 leading-[1.5]">
+            Experience
+          </h2>
+          <ul className="w-[45%] mt-24 space-y-12">
+            <Job
+              role="Full-stack Developer"
+              company="vnLab"
+              period="July 2021 - Present"
+              location="Remote/Lodz, Poland"
+            >
+              Co-designed and developed online publications, interactive
+              experiences and desktop apps. Co-chaired seminars and workshops on
+              the topic of technological approaches to web pubs. Co-facilitated
+              a talk during 2023 Mozilla Festival. Project-managed and assisted
+              a class of students during their Competence Project semester.
+            </Job>
+            <Job
+              role="Freelance Web Developer"
+              company="Enegenious"
+              period="January 2021 - December 2022"
+              location="Remote/Berlin, Germany"
+            >
+              Prototyped and developed data visualization and management
+              features for a microgrid simulation engine. Implemented a
+              micro-frontend web spreadsheet widget.
+            </Job>
+            <Job
+              role="Full-stack Intern"
+              company="BinarApps"
+              period="July 2019 - August 2019"
+              location="Lodz, Poland"
+            >
+              Developed a web app for a client in Ruby on Rails and React. Took
+              part in all stages of product development, from planning to
+              deployment.
+            </Job>
+          </ul>
+        </section>
+
+        <section className="col-span-full mt-32">
+          <h2 className="text-9xl font-bold font-serif text-[#997651] filter-noise opacity-45 leading-[1.5]">
+            Education
+          </h2>
+          <ul className="w-[45%] mt-24 space-y-12">
+            <School
+              name="Lodz University of Technology"
+              faculty="International Faculty of Engineering"
+              field="Information Technology"
+              degree="Bachelor of Engineering"
+              period="September 2018 - February 2021"
+              location="Lodz, Poland"
+            >
+              Worked in a group of international students to create an
+              educational platform in Ruby on Rails using problem based learning
+              method.
+            </School>
+            <School
+              name="Saxion University"
+              faculty="Erasmus Exchange"
+              field="European Project Semester"
+              period="February 2020 - August 2020"
+              location="Enschede, Netherlands"
+            >
+              Led a multidisciplinary and multilingual team of students
+              contracted to create a biosensor and a web application monitoring
+              IoT devices from AllThingsTalk Maker platform and alarming upon
+              undesired activity.
+              <br />
+              <br />
+              Communicated with external stakeholders such as Enschede Police
+              Departemnt, sensor producing company Sodaq and data aggregation
+              company IMD.
+            </School>
           </ul>
         </section>
       </main>
@@ -364,18 +444,6 @@ export default function Home() {
         >
           <path
             d="M10.6667 1.33334L14 4.66668V14.0055C14 14.3707 13.7034 14.6667 13.3377 14.6667H2.66227C2.29651 14.6667 2 14.3631 2 14.0055V1.99454C2 1.62938 2.29663 1.33334 2.66227 1.33334H10.6667ZM8.66667 8.00001V5.33334H7.33333V8.00001H5.33333L8 10.6667L10.6667 8.00001H8.66667Z"
-            className="fill-[#505050] group-hover:fill-[#997658] transition-all duration-500"
-          />
-        </svg>
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 16 16"
-          fill="none"
-          className="group"
-        >
-          <path
-            d="M12.2242 12.226H10.4472V9.44147C10.4472 8.77747 10.4337 7.923 9.52121 7.923C8.59475 7.923 8.45321 8.64553 8.45321 9.39247V12.226H6.67621V6.5H8.38321V7.28047H8.40621C8.64474 6.83047 9.22474 6.3555 10.0912 6.3555C11.8917 6.3555 12.2247 7.54053 12.2247 9.083L12.2242 12.226ZM4.66923 5.7165C4.09723 5.7165 3.63773 5.2535 3.63773 4.684C3.63773 4.115 4.09773 3.6525 4.66923 3.6525C5.23923 3.6525 5.70123 4.115 5.70123 4.684C5.70123 5.2535 5.23873 5.7165 4.66923 5.7165ZM5.56023 12.226H3.77823V6.5H5.56023V12.226ZM13.1132 2H2.88623C2.39673 2 2.00073 2.387 2.00073 2.8645V13.1355C2.00073 13.6135 2.39673 14 2.88623 14H13.1117C13.6007 14 14.0007 13.6135 14.0007 13.1355V2.8645C14.0007 2.387 13.6007 2 13.1117 2H13.1132Z"
             className="fill-[#505050] group-hover:fill-[#997658] transition-all duration-500"
           />
         </svg>
