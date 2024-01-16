@@ -32,7 +32,7 @@ import s21 from "../../../public/wss_1.png";
 export default function Projects() {
   return (
     <section className="col-span-full mt-32">
-      <h2 className="text-9xl font-bold font-serif text-[#997651] filter-noise opacity-45 leading-[1.5]">
+      <h2 className="text-[clamp(theme(fontSize.5xl),8vw,8vw)] font-bold font-serif text-[#997651] filter-noise opacity-45 leading-[1.5]">
         Selected Work
       </h2>
       <ul className="col-span-full mt-24 space-y-24">

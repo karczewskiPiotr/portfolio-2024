@@ -1,3 +1,8 @@
+// prettier-ignore
+const NAME = 
+`Piotr
+Karczewski`;
+
 export default function Landing() {
   return (
     <>
@@ -5,20 +10,26 @@ export default function Landing() {
         role="separator"
         className="col-start-4 col-end-11 h-px w-full bg-black mb-7"
       />
-      <div className="row-start-2 row-end-2 col-span-full z-10">
-        <h1 className="font-serif text-9xl font-semibold !leading-[110%] ml-[calc(162px+theme(spacing.5))] text-black">
+      <div className="row-start-2 row-end-2 col-span-full z-10 flex text-[clamp(theme(fontSize.4xl),8vw,8vw)] min-[400px]:text-[clamp(44px,8vw,8vw)]">
+        <svg
+          height="2em"
+          viewBox="0 0 162 203"
+          fill="red"
+          aria-hidden="true"
+          className="flex-shrink-0"
+        ></svg>
+        <h1 className="font-serif text-[clamp(theme(fontSize.4xl),8vw,8vw min-[400px]:text-[clamp(44px,8vw,8vw)])] font-semibold !leading-[110%] ml-5 text-black">
           Full-stack Web
           <br />
           Developer
         </h1>
       </div>
-      <div className="flex items-center row-start-2 row-end-2 col-span-full mt-10">
+      <div className="flex items-center row-start-2 row-end-2 col-span-full mt-[2vw] max-xl:mt-[6vw] text-[clamp(theme(fontSize.4xl),8vw,8vw)] min-[400px]:text-[clamp(44px,8vw,8vw)]">
         <svg
-          width="162"
-          height="203"
+          height="2em"
           viewBox="0 0 162 203"
           fill="none"
-          className="flex-shrink-0"
+          className="flex-shrink-0 "
         >
           <g opacity="0.4">
             <path
@@ -35,28 +46,28 @@ export default function Landing() {
             />
           </g>
         </svg>
-        <h2 className="font-black font-sans text-9xl leading-none tracking-[-0.05em] opacity-45 ml-2 whitespace-nowrap text-[#997651] relative isolate filter-noise">
-          Piotr&nbsp;Karczewski
+        <h2 className="font-black font-sans text-[clamp(theme(fontSize.4xl),8vw,8vw min-[400px]:text-[clamp(44px,8vw,8vw)])] leading-none tracking-[-0.05em] opacity-45 ml-2 max-xl:whitespace-pre text-[#997651] relative isolate filter-noise">
+          {NAME}
         </h2>
       </div>
       <div
         role="separator"
         className="col-start-1 col-end-7 h-px w-full bg-black mt-8"
       />
-      <section className="col-start-1 col-end-5 mt-8">
-        <p className="font-sans font-light text-lg">
+      <section className="col-span-full mt-8">
+        <p className="font-sans font-light text-[clamp(theme(fontSize.lg),1.18vw,1.2vw)] md:max-w-[45ch]">
           I’m a full-stack web developer with 3+ years of experience creating
           and maintaining data-driven single-page client apps, micro-frontend
           widgets and interactive web experiences.
         </p>
-        <div className="mt-8 space-x-5 flex">
+        <div className="flex flex-wrap">
           <div
             role="button"
-            className="font-sans  text-start border border-[#505050] font-semibold text-base px-3 flex items-center space-x-3 hover:bg-[rgba(153,118,88,0.45)] transition-colors duration-500 group"
+            className="font-sans text-start border border-[#505050] font-semibold text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] px-3 flex items-center space-x-3 hover:bg-[rgba(153,118,88,0.45)] transition-colors duration-500 group mt-8 mr-5"
           >
             <svg
-              width="16"
-              height="16"
+              width="1em"
+              height="1em"
               viewBox="0 0 16 16"
               fill="none"
               className="inline-block my-3 flex-shrink-0"
@@ -78,7 +89,7 @@ export default function Landing() {
           </div>
           <button
             type="button"
-            className="font-sans  text-start font-semibold text-base text-[#997658] group hover:text-[#505050] opacity-50 hover:opacity-100 transition-all duration-500"
+            className="mt-8 font-sans text-start font-semibold text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] text-[#997658] group hover:text-[#505050] opacity-50 hover:opacity-100 transition-all duration-500"
           >
             Download resume
             <svg

@@ -3,10 +3,10 @@ import School from "@/components/School";
 export default function Education() {
   return (
     <section className="col-span-full mt-32">
-      <h2 className="text-9xl font-bold font-serif text-[#997651] filter-noise opacity-45 leading-[1.5]">
+      <h2 className="text-[clamp(theme(fontSize.5xl),8vw,8vw)] font-bold font-serif text-[#997651] filter-noise opacity-45 leading-[1.5]">
         Education
       </h2>
-      <ul className="w-[45%] mt-24 space-y-12">
+      <ul className="lg:w-[45%] mt-24 space-y-12">
         <School
           name="Lodz University of Technology"
           faculty="International Faculty of Engineering"
