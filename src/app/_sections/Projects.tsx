@@ -31,14 +31,14 @@ import s21 from "../../../public/wss_1.png";
 
 export default function Projects() {
   return (
-    <section className="col-span-full mt-32">
+    <section id="works" className="col-span-full mt-32">
       <h2 className="text-[clamp(theme(fontSize.5xl),8vw,8vw)] font-bold font-serif text-[#997651] filter-noise opacity-45 leading-[1.5]">
         Selected Work
       </h2>
       <ul className="col-span-full mt-24 space-y-24">
         <Project
           name="Spotkania z Krakowskimi Kawiarniami"
-          link="#"
+          link="https://kawiarnie.szz.pl/"
           roles={["Developer"]}
           technologies={["HTML", "TypeScript", "TailwindCSS", "GSAP", "Vite"]}
           client="NIKZ"
@@ -53,7 +53,7 @@ export default function Projects() {
 
         <Project
           name="World of prosperity, dark ages"
-          link="#"
+          link="https://kryzysy.vnlab.org/"
           roles={["UI/UX Designer", "Developer"]}
           technologies={[
             "Astro",
@@ -75,7 +75,6 @@ export default function Projects() {
 
         <Project
           name="Refugee Atlas"
-          link="#"
           roles={["UX Designer", "Developer"]}
           technologies={[
             "Astro",
@@ -98,7 +97,7 @@ export default function Projects() {
 
         <Project
           name="Model i Metafora"
-          link="#"
+          link="https://model-i-metafora.vnlab.org/"
           roles={["Developer"]}
           technologies={[
             "Gatsby",
@@ -119,7 +118,7 @@ export default function Projects() {
 
         <Project
           name="vnLab Publication Series"
-          link="#"
+          link="https://archive-as-project.vnlab.org/"
           roles={["Developer"]}
           technologies={[
             "Gatsby",
@@ -139,7 +138,6 @@ export default function Projects() {
 
         <Project
           name="PubLab"
-          link="#"
           roles={["Developer"]}
           technologies={[
             "Electron",
@@ -159,7 +157,7 @@ export default function Projects() {
 
         <Project
           name="MicrogridCreator"
-          link="#"
+          link="https://energenious.eu/index.php/mgc/"
           roles={["UI/UX Designer", "Developer"]}
           technologies={[
             "React",
@@ -181,7 +179,7 @@ export default function Projects() {
 
         <Project
           name="Web Spreadsheet Widget"
-          link="#"
+          link="https://energenious.eu/index.php/mfe/"
           roles={["Developer"]}
           technologies={["React", "Material UI"]}
           client="Energenious ⨯ Tecnojest"

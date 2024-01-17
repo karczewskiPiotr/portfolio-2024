@@ -27,11 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${garamond.variable} ${jost.variable} p-[4.2vw] grid-cols-12 gap-x-5 grid  mx-auto`}
+        className={`${garamond.variable} ${jost.variable} p-[4.2vw] pb-32 grid-cols-12 gap-x-5 grid mx-auto`}
       >
         {children}
 
-        {/* <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none">
           <svg
             width="390"
             height="325"
@@ -325,7 +325,7 @@ export default function RootLayout({
               </filter>
             </defs>
           </svg>
-        </div> */}
+        </div>
       </body>
     </html>
   );

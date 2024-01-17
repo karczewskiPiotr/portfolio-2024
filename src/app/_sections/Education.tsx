@@ -2,7 +2,7 @@ import School from "@/components/School";
 
 export default function Education() {
   return (
-    <section className="col-span-full mt-32">
+    <section id="education" className="col-span-full mt-32">
       <h2 className="text-[clamp(theme(fontSize.5xl),8vw,8vw)] font-bold font-serif text-[#997651] filter-noise opacity-45 leading-[1.5]">
         Education
       </h2>

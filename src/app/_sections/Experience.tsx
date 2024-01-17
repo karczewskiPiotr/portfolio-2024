@@ -2,7 +2,7 @@ import Job from "@/components/Job";
 
 export default function Experience() {
   return (
-    <section className="col-span-full mt-32">
+    <section id="experience" className="col-span-full mt-32">
       <h2 className="text-[clamp(theme(fontSize.5xl),8vw,8vw)] font-bold font-serif text-[#997651] filter-noise opacity-45 leading-[1.5]">
         Experience
       </h2>

@@ -6,7 +6,7 @@ type Props = PropsWithChildren<{
   roles: string[];
   client: string;
   technologies: string[];
-  link: string;
+  link?: string;
   backgroundImage: StaticImageData;
   foregroundImages: StaticImageData[];
 }>;
@@ -16,17 +16,19 @@ export default function Project(props: Props) {
     <li className="font-sans text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] xl:text-[clamp(theme(fontSize.lg),1.18vw,1.2vw) flex max-lg:flex-col-reverse">
       <div className="flex-[5] flex flex-col md:max-xl:relative max-lg:mt-8">
         <div className="hidden lg:max-xl:block absolute right-0 top-0 bottom-0 w-px bg-black"></div>
-        <a href={props.link} className="group w-fit pr-8">
+        <a href={props.link} target="_blank" className="group w-fit pr-8">
           <h3 className="font-medium text-[clamp(theme(fontSize.lg),1.18vw,1.2vw)] xl:text-[clamp(theme(fontSize.xl),1.31vw,100vw)]">
             {props.name}{" "}
-            <svg
-              height="1em"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="inline-block"
-            >
-              <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-            </svg>
+            {props.link && (
+              <svg
+                height="1em"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="inline-block"
+              >
+                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+              </svg>
+            )}
           </h3>
         </a>
         <div role="separator" className=" h-px w-full bg-black mt-2 mb-4" />
