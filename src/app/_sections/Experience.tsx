@@ -2,8 +2,16 @@ import Job from "@/components/Job";
 
 export default function Experience() {
   return (
-    <section id="experience" className="col-span-full mt-32">
-      <h2 className="text-[clamp(theme(fontSize.5xl),8vw,8vw)] font-bold font-serif text-[#997651] filter-noise opacity-45 leading-[1.5]">
+    <section
+      role="region"
+      aria-labelledby="experience__header"
+      id="experience"
+      className="col-span-full mt-32"
+    >
+      <h2
+        id="experience__header"
+        className="text-[clamp(theme(fontSize.5xl),8vw,8vw)] font-bold font-serif text-[#997651] filter-noise opacity-45 leading-[1.5]"
+      >
         Experience
       </h2>
       <ul className="lg:w-[45%] mt-24 space-y-12">

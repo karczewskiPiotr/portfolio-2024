@@ -15,7 +15,7 @@ export default function School(props: Props) {
       <h3 className="font-medium text-[clamp(theme(fontSize.lg),1.18vw,1.2vw)] xl:text-[clamp(theme(fontSize.xl),1.31vw,100vw)]">
         {props.name}{" "}
       </h3>
-      <div role="separator" className=" h-px w-full bg-black mt-2 mb-2" />
+      <div className=" h-px w-full bg-black mt-2 mb-2" />
       <div className="text-[clamp(theme(fontSize.sm),0.88vw,0.89vw)] flex items-center justify-start mb-4">
         <p>{props.period}</p>
         <div className="h-1 w-1 rounded-full bg-[#505050] mx-3 " />

@@ -61,14 +61,14 @@ export default function Project(props: Props) {
             )}
           </h3>
         </a>
-        <div role="separator" className=" h-px w-full bg-black mt-2 mb-4" />
+        <div className=" h-px w-full bg-black mt-2 mb-4" />
         <p className="max-w-[45ch] font-light pr-8">{props.children}</p>
         <div className="flex items-center justify-start mt-8 mb-4">
-          <p className="leading-[0] text-[#505050] uppercase my-[-0.25em] font-sans font-medium text-[clamp(theme(fontSize.xs),0.755vw,0.76vw)] mr-3">
+          <h4 className="leading-[0] text-[#505050] uppercase my-[-0.25em] font-sans font-medium text-[clamp(theme(fontSize.xs),0.755vw,0.76vw)] mr-3">
             Technologies
-          </p>
+          </h4>
           <div className="h-1 w-1 rounded-full bg-[#505050] mr-3" />
-          <div role="separator" className="h-px flex-auto bg-black " />
+          <div className="h-px flex-auto bg-black " />
         </div>
         <ul className="flex pr-8 flex-wrap">
           {props.technologies.map((technology, index) => (
@@ -84,11 +84,11 @@ export default function Project(props: Props) {
           ))}
         </ul>
         <div className="flex items-center justify-start mt-8 mb-4">
-          <p className="leading-[0] text-[#505050] uppercase my-[-0.25em] font-sans font-medium text-[clamp(theme(fontSize.xs),0.755vw,0.76vw)] mr-3">
+          <h4 className="leading-[0] text-[#505050] uppercase my-[-0.25em] font-sans font-medium text-[clamp(theme(fontSize.xs),0.755vw,0.76vw)] mr-3">
             Role
-          </p>
+          </h4>
           <div className="h-1 w-1 rounded-full bg-[#505050] mr-3" />
-          <div role="separator" className="h-px flex-auto bg-black " />
+          <div className="h-px flex-auto bg-black " />
         </div>
         <ul className="flex space-x-3 pr-8">
           {props.roles.map((role, index) => (
@@ -104,11 +104,11 @@ export default function Project(props: Props) {
           ))}
         </ul>
         <div className="flex items-center justify-start mt-8 mb-4">
-          <p className="leading-[0] text-[#505050] uppercase my-[-0.25em] font-sans font-medium text-[clamp(theme(fontSize.xs),0.755vw,0.76vw)] mr-3">
+          <h4 className="leading-[0] text-[#505050] uppercase my-[-0.25em] font-sans font-medium text-[clamp(theme(fontSize.xs),0.755vw,0.76vw)] mr-3">
             Owner
-          </p>
+          </h4>
           <div className="h-1 w-1 rounded-full bg-[#505050] mr-3" />
-          <div role="separator" className="h-px flex-auto bg-black " />
+          <div className="h-px flex-auto bg-black " />
         </div>
         <p className="text-[clamp(theme(fontSize.sm),0.88vw,0.89vw)] font-sans pr-8">
           {props.client}
@@ -117,7 +117,7 @@ export default function Project(props: Props) {
       <div className="flex-[6] relative">
         <Image
           src={props.backgroundImage}
-          alt="asd"
+          alt="Background"
           className=""
           placeholder="blur"
         />
@@ -125,7 +125,7 @@ export default function Project(props: Props) {
           <Image
             key={`image__${index}`}
             src={image}
-            alt="asd1"
+            alt="Project mockup"
             className="absolute inset-0"
           />
         ))}

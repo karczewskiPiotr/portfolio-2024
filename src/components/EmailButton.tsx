@@ -21,6 +21,7 @@ export default function EmailButton() {
 
   return (
     <div
+      id="cta"
       role="button"
       tabIndex={0}
       onClick={copyToClipboard}

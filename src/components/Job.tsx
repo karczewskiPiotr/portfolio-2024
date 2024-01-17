@@ -15,7 +15,7 @@ export default function Job(props: Props) {
         <span className="text-[#997651] opacity-45 filter-noise">◆</span>{" "}
         {props.company}
       </h3>
-      <div role="separator" className=" h-px w-full bg-black mt-2 mb-2" />
+      <div className=" h-px w-full bg-black mt-2 mb-2" />
       <div className="text-[clamp(theme(fontSize.sm),0.88vw,0.89vw)] flex items-center justify-start mb-4">
         <p>{props.period}</p>
         <div className="h-1 w-1 rounded-full bg-[#505050] mx-3 " />
