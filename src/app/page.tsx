@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <a
-        className="absolute top-0 left-1/2 -translate-x-1/2 border border-black p-2 -translate-y-full focus:translate-y-0 transition-all duration-300"
+        className="absolute top-0 left-1/2 -translate-x-1/2 border border-black p-2 -translate-y-full focus:translate-y-0 transition-all duration-300 font-sans uppercase text-xs"
         href="#cta"
       >
         Skip to content
