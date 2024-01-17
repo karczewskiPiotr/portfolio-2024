@@ -4,23 +4,32 @@ import { useRef, useState } from "react";
 
 export default function EmailButton() {
   const [isPressed, setIsPressed] = useState(false);
-  const timeout = useRef<NodeJS.Timeout>(null);
+  const timeout = useRef<NodeJS.Timeout | null>(null);
 
   useRef(() => () => {
     if (timeout.current) clearTimeout(timeout.current);
   });
 
+  const copyToClipboard = () => {
+    setIsPressed(true);
+    navigator.clipboard.writeText("p.karczewsk@gmail.com");
+  };
+
+  const resetText = () => {
+    timeout.current = setTimeout(() => setIsPressed(false), 500);
+  };
+
   return (
     <div
-      onClick={() => {
-        setIsPressed(true);
-        navigator.clipboard.writeText("p.karczewsk@gmail.com");
-      }}
-      onMouseLeave={() => {
-        setTimeout(() => setIsPressed(false), 500);
-      }}
       role="button"
-      className="font-sans text-start border border-[#505050] font-semibold text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] px-3 flex items-center space-x-3 hover:bg-[rgba(153,118,88,0.45)] transition-colors duration-500 group mt-8 mr-5"
+      tabIndex={0}
+      onClick={copyToClipboard}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") copyToClipboard();
+      }}
+      onBlur={resetText}
+      onMouseLeave={resetText}
+      className="font-sans text-start border border-[#505050] font-semibold text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] px-3 flex items-center space-x-3 hover:bg-[rgba(153,118,88,0.45)] focus:bg-[rgba(153,118,88,0.45)] transition-colors duration-500 group mt-8 mr-5"
     >
       <svg
         width="1em"
@@ -36,10 +45,10 @@ export default function EmailButton() {
       </svg>
       <div className="h-full w-px bg-[#505050] inline-block" />
       <div className="text-center flex-auto grid">
-        <span className="row-start-1 row-end-1 col-start-1 col-end-1 group-hover:opacity-0 opacity-100 duration-500 group-hover:duration-300  group-hover:delay-0">
+        <span className="row-start-1 row-end-1 col-start-1 col-end-1 opacity-100 duration-500 group-hover:opacity-0 group-hover:duration-300 group-hover:delay-0 group-focus:opacity-0 group-focus:duration-300 group-focus:delay-0">
           p.karczewsk@gmail.com
         </span>
-        <span className="opacity-0 col-start-1 col-end-1 row-start-1 row-end-1 group-hover:opacity-100 transition-opacity duration-500">
+        <span className="opacity-0 col-start-1 col-end-1 row-start-1 row-end-1 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-500">
           {!isPressed ? "Click to copy!" : "Copied to clipboard!"}
         </span>
       </div>

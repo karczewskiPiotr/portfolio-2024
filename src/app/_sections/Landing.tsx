@@ -67,7 +67,7 @@ export default function Landing() {
           <a
             href="/Piotr Karczewski CV.pdf"
             target="_blank"
-            className="mt-8 font-sans text-start font-semibold text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] text-[#997658] group hover:text-[#505050] opacity-50 hover:opacity-100 transition-all duration-500 flex items-center"
+            className="mt-8 font-sans text-start font-semibold text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] text-[#997658] group hover:text-[#505050] focus:text-[#505050] opacity-50 hover:opacity-100 focus:opacity-100 transition-all duration-500 flex items-center"
           >
             Download resume
             <svg

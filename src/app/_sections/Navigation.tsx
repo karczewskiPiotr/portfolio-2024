@@ -49,7 +49,7 @@ export default function Navigation() {
       />
       <a
         data-animate="fade"
-        className="[writing-mode:tb-rl;] -rotate-180 font-sans font-bold text-[#505050] leading-none hover:text-[#997658] transition-colors duration-500 text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] mr-[2px] opacity-0"
+        className="[writing-mode:tb-rl;] -rotate-180 font-sans font-bold text-[#505050] leading-none hover:text-[#997658] focus:text-[#997658] transition-colors duration-500 text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] mr-[2px] opacity-0"
         href="#works"
       >
         selected work
@@ -60,7 +60,7 @@ export default function Navigation() {
       />
       <a
         data-animate="fade"
-        className="[writing-mode:tb-rl;] -rotate-180 font-sans font-bold text-[#505050] leading-none hover:text-[#997658] transition-colors duration-500 text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] mr-[2px] opacity-0"
+        className="[writing-mode:tb-rl;] -rotate-180 font-sans font-bold text-[#505050] leading-none hover:text-[#997658] focus:text-[#997658] transition-colors duration-500 text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] mr-[2px] opacity-0"
         href="#experience"
       >
         experience
@@ -71,7 +71,7 @@ export default function Navigation() {
       />
       <a
         data-animate="fade"
-        className="[writing-mode:tb-rl;] -rotate-180 font-sans font-bold text-[#505050] leading-none hover:text-[#997658] transition-colors duration-500 text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] mr-[2px] opacity-0"
+        className="[writing-mode:tb-rl;] -rotate-180 font-sans font-bold text-[#505050] leading-none hover:text-[#997658] focus:text-[#997658] transition-colors duration-500 text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] mr-[2px] opacity-0"
         href="#education"
       >
         education
