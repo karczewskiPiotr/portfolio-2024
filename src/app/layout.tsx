@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${garamond.variable} ${jost.variable} p-[4.2vw] pb-32 grid-cols-12 gap-x-5 grid mx-auto`}
       >

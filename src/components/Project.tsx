@@ -1,3 +1,9 @@
+"use client";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import { useLayoutEffect, useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import { PropsWithChildren } from "react";
 
@@ -12,8 +18,32 @@ type Props = PropsWithChildren<{
 }>;
 
 export default function Project(props: Props) {
+  const ref = useRef<HTMLLIElement>(null);
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+  });
+
+  useGSAP(() => {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ref.current,
+        start: "25% bottom",
+      },
+    });
+
+    timeline.fromTo(
+      ref.current,
+      { opacity: 0, translateY: 48 },
+      { opacity: 1, translateY: 0, ease: "power1.out", duration: 1 }
+    );
+  });
+
   return (
-    <li className="font-sans text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] xl:text-[clamp(theme(fontSize.lg),1.18vw,1.2vw) flex max-lg:flex-col-reverse">
+    <li
+      ref={ref}
+      className="font-sans text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] xl:text-[clamp(theme(fontSize.lg),1.18vw,1.2vw) flex max-lg:flex-col-reverse opacity-0"
+    >
       <div className="flex-[5] flex flex-col md:max-xl:relative max-lg:mt-8">
         <div className="hidden lg:max-xl:block absolute right-0 top-0 bottom-0 w-px bg-black"></div>
         <a href={props.link} target="_blank" className="group w-fit pr-8">

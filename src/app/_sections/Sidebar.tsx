@@ -1,7 +1,33 @@
+"use client";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+
 export default function Sidebar() {
+  const aside = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        "[data-animate='fade']",
+        { opacity: 0, translateY: -10 },
+        { opacity: 1, translateY: 0, stagger: 0.1 }
+      );
+    },
+    { scope: aside }
+  );
+
   return (
-    <aside className="col-start-12 col-span-1 flex flex-col items-end space-y-6 sticky top-16 h-fit max-md:hidden">
-      <a href="mailto:p.karczewsk@gmail.com" className="group">
+    <aside
+      ref={aside}
+      className="col-start-12 col-span-1 flex flex-col items-end space-y-6 sticky top-16 h-fit max-md:hidden"
+    >
+      <a
+        data-animate="fade"
+        href="mailto:p.karczewsk@gmail.com"
+        className="group opacity-0"
+      >
         <svg width="24" height="24" viewBox="0 0 16 16" fill="none">
           <g clipPath="url(#clip0_18_285)">
             <path
@@ -16,7 +42,12 @@ export default function Sidebar() {
           </defs>
         </svg>
       </a>
-      <a href="/Piotr Karczewski CV.pdf" target="_blank" className="group">
+      <a
+        data-animate="fade"
+        href="/Piotr Karczewski CV.pdf"
+        target="_blank"
+        className="group opacity-0"
+      >
         <svg width="24" height="24" viewBox="0 0 16 16" fill="none">
           <path
             d="M10.6667 1.33334L14 4.66668V14.0055C14 14.3707 13.7034 14.6667 13.3377 14.6667H2.66227C2.29651 14.6667 2 14.3631 2 14.0055V1.99454C2 1.62938 2.29663 1.33334 2.66227 1.33334H10.6667ZM8.66667 8.00001V5.33334H7.33333V8.00001H5.33333L8 10.6667L10.6667 8.00001H8.66667Z"
@@ -25,9 +56,10 @@ export default function Sidebar() {
         </svg>
       </a>
       <a
+        data-animate="fade"
         href="https://github.com/karczewskiPiotr"
         target="_blank"
-        className="group"
+        className="group opacity-0"
       >
         <svg width="24" height="24" viewBox="0 0 16 16" fill="none">
           <path
