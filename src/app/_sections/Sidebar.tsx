@@ -24,6 +24,7 @@ export default function Sidebar() {
       className="col-start-12 col-span-1 flex flex-col items-end space-y-6 sticky top-16 h-fit max-md:hidden"
     >
       <a
+        aria-label="Email"
         data-animate="fade"
         href="mailto:p.karczewsk@gmail.com"
         className="group opacity-0"
@@ -43,6 +44,7 @@ export default function Sidebar() {
         </svg>
       </a>
       <a
+        aria-label="Download resume"
         data-animate="fade"
         href="/Piotr Karczewski CV.pdf"
         target="_blank"
@@ -56,6 +58,7 @@ export default function Sidebar() {
         </svg>
       </a>
       <a
+        aria-label="GitHub Profile"
         data-animate="fade"
         href="https://github.com/karczewskiPiotr"
         target="_blank"
