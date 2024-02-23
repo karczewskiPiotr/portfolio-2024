@@ -10,9 +10,9 @@ export default function Landing() {
     <>
       <div
         role="separator"
-        className="col-start-4 col-end-11 h-px w-full bg-black mb-7"
+        className="col-start-4 col-end-11 mb-7 h-px w-full bg-black"
       />
-      <div className="row-start-2 row-end-2 col-span-full z-10 flex text-[clamp(theme(fontSize.4xl),8vw,8vw)] min-[400px]:text-[clamp(44px,8vw,8vw)]">
+      <div className="z-10 col-span-full row-start-2 row-end-2 flex text-[clamp(theme(fontSize.4xl),8vw,8vw)] min-[400px]:text-[clamp(44px,8vw,8vw)]">
         <svg
           height="2em"
           viewBox="0 0 162 203"
@@ -20,13 +20,13 @@ export default function Landing() {
           aria-hidden="true"
           className="flex-shrink-0"
         ></svg>
-        <h1 className="font-serif text-[clamp(theme(fontSize.4xl),8vw,8vw min-[400px]:text-[clamp(44px,8vw,8vw)])] font-semibold !leading-[110%] ml-5 text-black">
+        <h1 className="text-[clamp(theme(fontSize.4xl),8vw,8vw min-[400px]:text-[clamp(44px,8vw,8vw)])] ml-5 font-serif font-semibold !leading-[110%] text-black">
           Full-stack Web
           <br />
           Developer
         </h1>
       </div>
-      <div className="flex items-center row-start-2 row-end-2 col-span-full mt-[2vw] max-xl:mt-[6vw] text-[clamp(theme(fontSize.4xl),8vw,8vw)] min-[400px]:text-[clamp(44px,8vw,8vw)]">
+      <div className="col-span-full row-start-2 row-end-2 mt-[2vw] flex items-center text-[clamp(theme(fontSize.4xl),8vw,8vw)] max-xl:mt-[6vw] min-[400px]:text-[clamp(44px,8vw,8vw)]">
         <svg
           height="2em"
           viewBox="0 0 162 203"
@@ -48,16 +48,16 @@ export default function Landing() {
             />
           </g>
         </svg>
-        <h2 className="font-black font-sans text-[clamp(theme(fontSize.4xl),8vw,8vw min-[400px]:text-[clamp(44px,8vw,8vw)])] leading-none tracking-[-0.05em] opacity-45 ml-2 max-xl:whitespace-pre text-[#997651] relative isolate filter-noise">
+        <h2 className="text-[clamp(theme(fontSize.4xl),8vw,8vw min-[400px]:text-[clamp(44px,8vw,8vw)])] filter-noise relative isolate ml-2 font-sans font-black leading-none tracking-[-0.05em] text-[#997651] opacity-45 max-xl:whitespace-pre">
           {NAME}
         </h2>
       </div>
       <div
         role="separator"
-        className="col-start-1 col-end-7 h-px w-full bg-black mt-8"
+        className="col-start-1 col-end-7 mt-8 h-px w-full bg-black"
       />
       <section className="col-span-full mt-8">
-        <p className="font-sans font-light text-[clamp(theme(fontSize.lg),1.18vw,1.2vw)] md:max-w-[45ch]">
+        <p className="font-sans text-[clamp(theme(fontSize.lg),1.18vw,1.2vw)] font-light md:max-w-[45ch]">
           I’m a full-stack web developer with 3+ years of experience creating
           and maintaining data-driven single-page client apps, micro-frontend
           widgets and interactive web experiences.
@@ -67,14 +67,14 @@ export default function Landing() {
           <a
             href="/Piotr Karczewski CV.pdf"
             target="_blank"
-            className="mt-8 font-sans text-start font-semibold text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] text-[#997658] group hover:text-[#505050] focus:text-[#505050] opacity-50 hover:opacity-100 focus:opacity-100 transition-all duration-500 flex items-center"
+            className="group mt-8 flex items-center text-start font-sans text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] font-semibold text-[#997658] opacity-50 transition-all duration-500 hover:text-[#505050] hover:opacity-100 focus:text-[#505050] focus:opacity-100"
           >
             Download resume
             <svg
               width="16"
               height="16"
               viewBox="0 0 16 16"
-              className="inline-block ml-2 mt-[0.25em]"
+              className="ml-2 mt-[0.25em] inline-block"
             >
               <path
                 d="M10.6667 1L14 4.33333V13.6721C14 14.0373 13.7034 14.3333 13.3377 14.3333H2.66227C2.29651 14.3333 2 14.0298 2 13.6721V1.6612C2 1.29603 2.29663 1 2.66227 1H10.6667ZM8.66667 7.66667V5H7.33333V7.66667H5.33333L8 10.3333L10.6667 7.66667H8.66667Z"

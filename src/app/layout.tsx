@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${garamond.variable} ${jost.variable} p-[4.2vw] pb-32 grid-cols-12 gap-x-5 grid mx-auto`}
+        className={`${garamond.variable} ${jost.variable} mx-auto grid grid-cols-12 gap-x-5 p-[4.2vw] pb-32`}
       >
         {children}
 
@@ -37,14 +37,14 @@ export default function RootLayout({
           </filter>
         </svg>
 
-        <div className="absolute inset-0 pointer-events-none">
+        <div className="pointer-events-none absolute inset-0">
           <svg
             width="390"
             height="325"
             viewBox="0 0 390 325"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="left-0 top-0 mix-blend-color-burn z-[-1] overflow-visible w-1/2 h-auto -translate-x-[15%] -translate-y-[15%] blur-3xl"
+            className="left-0 top-0 z-[-1] h-auto w-1/2 -translate-x-[15%] -translate-y-[15%] overflow-visible mix-blend-color-burn blur-3xl"
           >
             <g filter="url(#filter0_df_121_26)">
               <path
@@ -72,7 +72,7 @@ export default function RootLayout({
             viewBox="0 0 1092 707"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute right-0 bottom-0 mix-blend-color-burn z-[-1] overflow-visible blur-3xl w-3/5 h-auto"
+            className="absolute bottom-0 right-0 z-[-1] h-auto w-3/5 overflow-visible mix-blend-color-burn blur-3xl"
           >
             <g>
               <path

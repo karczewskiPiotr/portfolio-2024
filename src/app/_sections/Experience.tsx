@@ -10,11 +10,11 @@ export default function Experience() {
     >
       <h2
         id="experience__header"
-        className="text-[clamp(theme(fontSize.5xl),8vw,8vw)] font-bold font-serif text-[#997651] filter-noise opacity-45 leading-[1.5]"
+        className="filter-noise font-serif text-[clamp(theme(fontSize.5xl),8vw,8vw)] font-bold leading-[1.5] text-[#997651] opacity-45"
       >
         Experience
       </h2>
-      <ul className="lg:w-[45%] mt-24 space-y-12">
+      <ul className="mt-24 space-y-12 lg:w-[45%]">
         <Job
           role="Full-stack Developer"
           company="vnLab"

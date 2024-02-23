@@ -12,16 +12,16 @@ export default function Navigation() {
       gsap.fromTo(
         "[data-animate='fade']",
         { opacity: 0, translateY: -10 },
-        { opacity: 1, translateY: 0, stagger: 0.1 }
+        { opacity: 1, translateY: 0, stagger: 0.1 },
       );
     },
-    { scope: nav }
+    { scope: nav },
   );
 
   return (
     <nav
       ref={nav}
-      className="flex flex-col col-start-1 col-span-1 w-fit space-y-2 items-center sticky top-16 h-fit max-md:hidden "
+      className="sticky top-16 col-span-1 col-start-1 flex h-fit w-fit flex-col items-center space-y-2 max-md:hidden "
     >
       <svg
         data-animate="fade"
@@ -45,33 +45,33 @@ export default function Navigation() {
       </svg>
       <div
         data-animate="fade"
-        className="h-1 w-1 rounded-full bg-[#505050] mx-auto opacity-0"
+        className="mx-auto h-1 w-1 rounded-full bg-[#505050] opacity-0"
       />
       <a
         data-animate="fade"
-        className="[writing-mode:tb-rl;] -rotate-180 font-sans font-bold text-[#505050] leading-none hover:text-[#997658] focus:text-[#997658] transition-colors duration-500 text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] mr-[2px] opacity-0"
+        className="mr-[2px] -rotate-180 font-sans text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] font-bold leading-none text-[#505050] opacity-0 transition-colors duration-500 [writing-mode:tb-rl;] hover:text-[#997658] focus:text-[#997658]"
         href="#works"
       >
         selected work
       </a>
       <div
         data-animate="fade"
-        className="h-1 w-1 rounded-full bg-[#505050] mx-auto opacity-0"
+        className="mx-auto h-1 w-1 rounded-full bg-[#505050] opacity-0"
       />
       <a
         data-animate="fade"
-        className="[writing-mode:tb-rl;] -rotate-180 font-sans font-bold text-[#505050] leading-none hover:text-[#997658] focus:text-[#997658] transition-colors duration-500 text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] mr-[2px] opacity-0"
+        className="mr-[2px] -rotate-180 font-sans text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] font-bold leading-none text-[#505050] opacity-0 transition-colors duration-500 [writing-mode:tb-rl;] hover:text-[#997658] focus:text-[#997658]"
         href="#experience"
       >
         experience
       </a>
       <div
         data-animate="fade"
-        className="h-1 w-1 rounded-full bg-[#505050] mx-auto opacity-0"
+        className="mx-auto h-1 w-1 rounded-full bg-[#505050] opacity-0"
       />
       <a
         data-animate="fade"
-        className="[writing-mode:tb-rl;] -rotate-180 font-sans font-bold text-[#505050] leading-none hover:text-[#997658] focus:text-[#997658] transition-colors duration-500 text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] mr-[2px] opacity-0"
+        className="mr-[2px] -rotate-180 font-sans text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] font-bold leading-none text-[#505050] opacity-0 transition-colors duration-500 [writing-mode:tb-rl;] hover:text-[#997658] focus:text-[#997658]"
         href="#education"
       >
         education
