@@ -30,7 +30,7 @@ export default function EmailButton() {
       }}
       onBlur={resetText}
       onMouseLeave={resetText}
-      className="group mr-5 mt-8 flex items-center  space-x-3 border border-[#505050] px-3 text-start font-sans text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] font-semibold transition-colors duration-500 hover:bg-[rgba(153,118,88,0.45)] focus:bg-[rgba(153,118,88,0.45)]"
+      className="group mr-5 mt-8 flex items-center  space-x-3 border border-black-950 px-3 text-start font-sans text-var-base font-semibold transition-colors duration-500 hover:bg-[rgba(153,118,88,0.45)] focus:bg-[rgba(153,118,88,0.45)]"
     >
       <svg
         width="1em"
@@ -44,7 +44,7 @@ export default function EmailButton() {
           fill="#505050"
         />
       </svg>
-      <div className="inline-block h-full w-px bg-[#505050]" />
+      <div className="inline-block h-full w-px bg-black-950" />
       <div className="grid flex-auto text-center">
         <span className="col-start-1 col-end-1 row-start-1 row-end-1 opacity-100 duration-500 group-hover:opacity-0 group-hover:delay-0 group-hover:duration-300 group-focus:opacity-0 group-focus:delay-0 group-focus:duration-300">
           p.karczewsk@gmail.com

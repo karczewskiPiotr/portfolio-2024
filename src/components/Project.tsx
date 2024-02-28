@@ -42,12 +42,12 @@ export default function Project(props: Props) {
   return (
     <li
       ref={ref}
-      className="xl:text-[clamp(theme(fontSize.lg),1.18vw,1.2vw) flex font-sans text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] opacity-0 max-lg:flex-col-reverse"
+      className="xl:text-[clamp(theme(fontSize.lg),1.18vw,1.2vw) flex font-sans text-var-base opacity-0 max-lg:flex-col-reverse"
     >
       <div className="flex flex-[5] flex-col max-lg:mt-8 md:max-xl:relative">
         <div className="absolute bottom-0 right-0 top-0 hidden w-px bg-black lg:max-xl:block"></div>
         <a href={props.link} target="_blank" className="group w-fit pr-8">
-          <h3 className="text-[clamp(theme(fontSize.lg),1.18vw,1.2vw)] font-medium xl:text-[clamp(theme(fontSize.xl),1.31vw,100vw)]">
+          <h3 className="text-var-lg font-medium xl:text-var-xl">
             {props.name}{" "}
             {props.link && (
               <svg
@@ -64,55 +64,50 @@ export default function Project(props: Props) {
         <div className=" mb-4 mt-2 h-px w-full bg-black" />
         <p className="max-w-[45ch] pr-8 font-light">{props.children}</p>
         <div className="mb-4 mt-8 flex items-center justify-start">
-          <h4 className="my-[-0.25em] mr-3 font-sans text-[clamp(theme(fontSize.xs),0.755vw,0.76vw)] font-medium uppercase leading-[0] text-[#505050]">
+          <h4 className="my-[-0.25em] mr-3 font-sans text-var-xs font-medium uppercase leading-[0] text-black-950">
             Technologies
           </h4>
-          <div className="mr-3 h-1 w-1 rounded-full bg-[#505050]" />
+          <div className="mr-3 h-1 w-1 rounded-full bg-black-950" />
           <div className="h-px flex-auto bg-black " />
         </div>
         <ul className="flex flex-wrap pr-8">
           {props.technologies.map((technology, index) => (
             <li
               key={technology}
-              className="mr-3 flex items-center text-[clamp(theme(fontSize.sm),0.88vw,0.89vw)] text-black"
+              className="mr-3 flex items-center text-var-sm text-black"
             >
               {technology}
               {props.technologies.length - 1 !== index && (
-                <div className="mx-auto ml-3 h-1 w-1 rounded-full bg-[#505050]" />
+                <div className="mx-auto ml-3 h-1 w-1 rounded-full bg-black-950" />
               )}
             </li>
           ))}
         </ul>
         <div className="mb-4 mt-8 flex items-center justify-start">
-          <h4 className="my-[-0.25em] mr-3 font-sans text-[clamp(theme(fontSize.xs),0.755vw,0.76vw)] font-medium uppercase leading-[0] text-[#505050]">
+          <h4 className="my-[-0.25em] mr-3 font-sans text-var-xs font-medium uppercase leading-[0] text-black-950">
             Role
           </h4>
-          <div className="mr-3 h-1 w-1 rounded-full bg-[#505050]" />
+          <div className="mr-3 h-1 w-1 rounded-full bg-black-950" />
           <div className="h-px flex-auto bg-black " />
         </div>
         <ul className="flex space-x-3 pr-8">
           {props.roles.map((role, index) => (
-            <li
-              key={role}
-              className="flex items-center text-[clamp(theme(fontSize.sm),0.88vw,0.89vw)] text-black"
-            >
+            <li key={role} className="flex items-center text-var-sm text-black">
               {role}
               {props.roles.length - 1 !== index && (
-                <div className="mx-auto ml-3 h-1 w-1 rounded-full bg-[#505050]" />
+                <div className="mx-auto ml-3 h-1 w-1 rounded-full bg-black-950" />
               )}
             </li>
           ))}
         </ul>
         <div className="mb-4 mt-8 flex items-center justify-start">
-          <h4 className="my-[-0.25em] mr-3 font-sans text-[clamp(theme(fontSize.xs),0.755vw,0.76vw)] font-medium uppercase leading-[0] text-[#505050]">
+          <h4 className="my-[-0.25em] mr-3 font-sans text-var-xs font-medium uppercase leading-[0] text-black-950">
             Owner
           </h4>
-          <div className="mr-3 h-1 w-1 rounded-full bg-[#505050]" />
+          <div className="mr-3 h-1 w-1 rounded-full bg-black-950" />
           <div className="h-px flex-auto bg-black " />
         </div>
-        <p className="pr-8 font-sans text-[clamp(theme(fontSize.sm),0.88vw,0.89vw)]">
-          {props.client}
-        </p>
+        <p className="pr-8 font-sans text-var-sm">{props.client}</p>
       </div>
       <div className="relative flex-[6]">
         <Image

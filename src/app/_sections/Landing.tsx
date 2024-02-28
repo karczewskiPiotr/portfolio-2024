@@ -12,7 +12,7 @@ export default function Landing() {
         role="separator"
         className="col-start-4 col-end-11 mb-7 h-px w-full bg-black"
       />
-      <div className="z-10 col-span-full row-start-2 row-end-2 flex text-[clamp(theme(fontSize.4xl),8vw,8vw)] min-[400px]:text-[clamp(44px,8vw,8vw)]">
+      <div className="z-10 col-span-full row-start-2 row-end-2 flex text-var-4xl min-[400px]:text-var-md">
         <svg
           height="2em"
           viewBox="0 0 162 203"
@@ -20,13 +20,13 @@ export default function Landing() {
           aria-hidden="true"
           className="flex-shrink-0"
         ></svg>
-        <h1 className="text-[clamp(theme(fontSize.4xl),8vw,8vw min-[400px]:text-[clamp(44px,8vw,8vw)])] ml-5 font-serif font-semibold !leading-[110%] text-black">
+        <h1 className="text-[clamp(theme(fontSize.4xl),8vw,8vw min-[400px]:text-var-md)] ml-5 font-serif font-semibold !leading-[110%] text-black">
           Full-stack Web
           <br />
           Developer
         </h1>
       </div>
-      <div className="col-span-full row-start-2 row-end-2 mt-[2vw] flex items-center text-[clamp(theme(fontSize.4xl),8vw,8vw)] max-xl:mt-[6vw] min-[400px]:text-[clamp(44px,8vw,8vw)]">
+      <div className="col-span-full row-start-2 row-end-2 mt-[2vw] flex items-center text-var-4xl max-xl:mt-[6vw] min-[400px]:text-var-md">
         <svg
           height="2em"
           viewBox="0 0 162 203"
@@ -48,7 +48,7 @@ export default function Landing() {
             />
           </g>
         </svg>
-        <h2 className="text-[clamp(theme(fontSize.4xl),8vw,8vw min-[400px]:text-[clamp(44px,8vw,8vw)])] filter-noise relative isolate ml-2 font-sans font-black leading-none tracking-[-0.05em] text-[#997651] opacity-45 max-xl:whitespace-pre">
+        <h2 className="text-[clamp(theme(fontSize.4xl),8vw,8vw min-[400px]:text-var-md)] filter-noise relative isolate ml-2 font-sans font-black leading-none tracking-[-0.05em] text-copper-900 opacity-45 max-xl:whitespace-pre">
           {NAME}
         </h2>
       </div>
@@ -57,7 +57,7 @@ export default function Landing() {
         className="col-start-1 col-end-7 mt-8 h-px w-full bg-black"
       />
       <section className="col-span-full mt-8">
-        <p className="font-sans text-[clamp(theme(fontSize.lg),1.18vw,1.2vw)] font-light md:max-w-[45ch]">
+        <p className="font-sans text-var-lg font-light md:max-w-[45ch]">
           I’m a full-stack web developer with 3+ years of experience creating
           and maintaining data-driven single-page client apps, micro-frontend
           widgets and interactive web experiences.
@@ -67,7 +67,7 @@ export default function Landing() {
           <a
             href="/Piotr Karczewski CV.pdf"
             target="_blank"
-            className="group mt-8 flex items-center text-start font-sans text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] font-semibold text-[#997658] opacity-50 transition-all duration-500 hover:text-[#505050] hover:opacity-100 focus:text-[#505050] focus:opacity-100"
+            className="group mt-8 flex items-center text-start font-sans text-var-base font-semibold text-copper-900 opacity-50 transition-all duration-500 hover:text-black-950 hover:opacity-100 focus:text-black-950 focus:opacity-100"
           >
             Download resume
             <svg

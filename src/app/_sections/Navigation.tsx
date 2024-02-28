@@ -21,7 +21,7 @@ export default function Navigation() {
   return (
     <nav
       ref={nav}
-      className="sticky top-16 col-span-1 col-start-1 flex h-fit w-fit flex-col items-center space-y-2 max-md:hidden "
+      className="sticky top-16 col-span-1 col-start-1 flex h-fit w-fit flex-col items-center space-y-2 max-md:hidden"
     >
       <svg
         data-animate="fade"
@@ -45,33 +45,33 @@ export default function Navigation() {
       </svg>
       <div
         data-animate="fade"
-        className="mx-auto h-1 w-1 rounded-full bg-[#505050] opacity-0"
+        className="mx-auto h-1 w-1 rounded-full bg-black-950 opacity-0"
       />
       <a
         data-animate="fade"
-        className="mr-[2px] -rotate-180 font-sans text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] font-bold leading-none text-[#505050] opacity-0 transition-colors duration-500 [writing-mode:tb-rl;] hover:text-[#997658] focus:text-[#997658]"
+        className="mr-[2px] -rotate-180 font-sans text-var-base font-bold leading-none text-black-950 opacity-0 transition-colors duration-500 [writing-mode:tb-rl;] hover:text-copper-900 focus:text-copper-900"
         href="#works"
       >
         selected work
       </a>
       <div
         data-animate="fade"
-        className="mx-auto h-1 w-1 rounded-full bg-[#505050] opacity-0"
+        className="mx-auto h-1 w-1 rounded-full bg-black-950 opacity-0"
       />
       <a
         data-animate="fade"
-        className="mr-[2px] -rotate-180 font-sans text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] font-bold leading-none text-[#505050] opacity-0 transition-colors duration-500 [writing-mode:tb-rl;] hover:text-[#997658] focus:text-[#997658]"
+        className="mr-[2px] -rotate-180 font-sans text-var-base font-bold leading-none text-black-950 opacity-0 transition-colors duration-500 [writing-mode:tb-rl;] hover:text-copper-900 focus:text-copper-900"
         href="#experience"
       >
         experience
       </a>
       <div
         data-animate="fade"
-        className="mx-auto h-1 w-1 rounded-full bg-[#505050] opacity-0"
+        className="mx-auto h-1 w-1 rounded-full bg-black-950 opacity-0"
       />
       <a
         data-animate="fade"
-        className="mr-[2px] -rotate-180 font-sans text-[clamp(theme(fontSize.base),1.045vw,1.05vw)] font-bold leading-none text-[#505050] opacity-0 transition-colors duration-500 [writing-mode:tb-rl;] hover:text-[#997658] focus:text-[#997658]"
+        className="mr-[2px] -rotate-180 font-sans text-var-base font-bold leading-none text-black-950 opacity-0 transition-colors duration-500 [writing-mode:tb-rl;] hover:text-copper-900 focus:text-copper-900"
         href="#education"
       >
         education

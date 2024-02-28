@@ -39,7 +39,7 @@ export default function Projects() {
     >
       <h2
         id="works__header"
-        className="filter-noise font-serif text-[clamp(theme(fontSize.5xl),8vw,8vw)] font-bold leading-[1.5] text-[#997651] opacity-45"
+        className="filter-noise font-serif text-var-5xl font-bold leading-[1.5] text-copper-900 opacity-45"
       >
         Selected Work
       </h2>
