@@ -21,7 +21,7 @@ export default function Navigation() {
   return (
     <nav
       ref={nav}
-      className="col-start-2 col-end-6 flex h-fit w-fit flex-row items-center space-x-2 py-4 max-md:hidden"
+      className="col-start-2 col-end-8 flex h-fit w-fit flex-row items-center space-x-2 py-4 max-md:hidden"
     >
       <a
         data-animate="fade"

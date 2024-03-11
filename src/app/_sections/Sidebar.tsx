@@ -21,7 +21,7 @@ export default function Sidebar() {
   return (
     <div
       ref={ref}
-      className="col-start-6 col-end-12 row-start-1 flex h-fit items-end justify-end space-x-2 py-4 "
+      className="col-start-8 col-end-12 row-start-1 flex h-fit items-end justify-end space-x-2 py-4 max-md:col-span-full"
     >
       <a
         aria-label="Email"

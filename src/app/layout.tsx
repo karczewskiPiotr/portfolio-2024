@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-pt-24 scroll-smooth">
+    <html lang="en" className="scroll-pt-24 overflow-x-hidden scroll-smooth">
       <body
         className={`${garamond.variable} ${jost.variable} ${GeistSans.variable} grain mx-auto grid grid-cols-12 grid-rows-[min-content_auto] gap-x-5 p-[4.2vw] pb-32 pt-0`}
       >
