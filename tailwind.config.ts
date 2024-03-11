@@ -9,17 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        neutral: {
+          925: "rgb(20 20 20 / <alpha-value>)",
+        },
         copper: {
-          900: "rgb(153 118 81 / <alpha-value>)",
-          950: "rgb(153 118 88 / <alpha-value>)",
+          900: "rgb(14 165 233 / <alpha-value>)",
+          950: "rgb(14 165 233 / <alpha-value>)",
         },
         black: {
-          DEFAULT: "rgb(0 0 0 / <alpha-value>)",
-          950: "rgb(80 80 80 /<alpha-value>)",
+          DEFAULT: "rgb(255 255 255 / <alpha-value>)",
+          950: "rgb(150 150 150 /<alpha-value>)",
         },
       },
       fontFamily: {
-        sans: ["var(--font-jost)"],
+        sans: ["var(--font-geist-sans)"],
         serif: ["var(--font-garamond)"],
       },
       fontSize: {
