@@ -18,7 +18,8 @@ export default function Home() {
         <Navigation />
         <Sidebar />
       </header>
-      <main className="blob col-start-2 col-end-12 row-start-2 row-end-[-1] mt-24 grid grid-cols-10 gap-x-5 max-md:col-span-full">
+      <main className="col-start-2 col-end-12 row-start-2 row-end-[-1] mt-24 grid grid-cols-10 gap-x-5 max-md:col-span-full">
+        <div className="blob absolute inset-0 overflow-hidden"></div>
         <Landing />
         <Projects />
         <Experience />

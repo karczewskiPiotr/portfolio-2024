@@ -30,7 +30,7 @@ export default function EmailButton() {
       }}
       onBlur={resetText}
       onMouseLeave={resetText}
-      className="group mt-8 flex items-center space-x-3 rounded-xl border border-neutral-500 px-3 text-start font-sans text-var-base font-semibold transition-colors duration-500 hover:bg-cyan-950/45 focus:bg-cyan-950/45"
+      className="group mt-8 flex items-center space-x-3 rounded-xl border border-neutral-500 px-3 text-start font-sans text-var-sm font-semibold transition-colors duration-500 hover:bg-cyan-950/45 focus:bg-cyan-950/45"
     >
       <svg
         width="1em"

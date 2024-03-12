@@ -32,7 +32,8 @@ export default function Line(props: { variant: number }) {
           start: "top center",
           end: "bottom center",
           scrub: 2,
-          immediateRender: false,
+          invalidateOnRefresh: true,
+          markers: true,
         },
       });
 

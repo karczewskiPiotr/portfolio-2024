@@ -24,7 +24,7 @@ export default function Landing() {
           <a
             href="/Piotr Karczewski CV.pdf"
             target="_blank"
-            className="group ml-4 mt-8 flex items-center rounded-xl px-3 text-start font-sans text-var-base font-semibold text-cyan-200 opacity-100 transition-all duration-500 hover:bg-cyan-950/45 hover:text-neutral-50 hover:opacity-100 focus:bg-cyan-950/45 focus:text-neutral-50 focus:opacity-100 max-md:mr-4"
+            className="group ml-4 mt-8 flex items-center rounded-xl px-3 text-start font-sans text-var-sm font-semibold text-cyan-200 opacity-100 transition-all duration-500 hover:bg-cyan-950/45 hover:text-neutral-50 hover:opacity-100 focus:bg-cyan-950/45 focus:text-neutral-50 focus:opacity-100 max-md:mr-4"
           >
             Download resume
             <svg
