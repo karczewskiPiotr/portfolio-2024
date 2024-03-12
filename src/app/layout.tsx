@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-pt-24 overflow-x-hidden scroll-smooth">
       <body
-        className={`${garamond.variable} ${jost.variable} ${GeistSans.variable} grain mx-auto grid grid-cols-12 grid-rows-[min-content_auto] gap-x-5 p-[4.2vw] pb-32 pt-0`}
+        className={`${garamond.variable} ${jost.variable} ${GeistSans.variable} grain mx-auto grid grid-cols-12 grid-rows-[min-content_auto] gap-x-5 p-[4.2vw] pb-16 pt-0`}
       >
         {children}
         <MouseGradient />

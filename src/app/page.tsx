@@ -22,7 +22,7 @@ export default function Home() {
         <Landing />
         <Projects />
         <Experience />
-        {/* <Education /> */}
+        <Education />
       </main>
     </>
   );

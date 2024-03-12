@@ -6,16 +6,20 @@ export default function Education() {
       role="region"
       aria-labelledby="education__header"
       id="education"
-      className="col-span-full mt-32"
+      className=" relative col-span-full pb-32 pt-32"
     >
+      <div className="absolute bottom-0 left-1/2 top-16 z-[-5] w-screen -translate-x-1/2 bg-grid-small-white/[0.2]">
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-neutral-925 [mask-image:linear-gradient(to_bottom,theme(colors.neutral.925),transparent_50%,theme(colors.neutral.925))]"></div>
+      </div>
       <h2
         id="education__header"
-        className="filter-noise font-serif text-var-5xl font-bold leading-[1.5] text-copper-900 opacity-45"
+        className="font-sans text-var-5xl font-bold leading-[1.5] text-neutral-50"
       >
         Education
       </h2>
-      <ul className="mt-24 space-y-12 lg:w-[45%]">
+      <ul className="mt-24 space-y-12 ">
         <School
+          className="md:mr-auto"
           name="Lodz University of Technology"
           faculty="International Faculty of Engineering"
           field="Information Technology"
@@ -27,6 +31,7 @@ export default function Education() {
           platform in Ruby on Rails using problem based learning method.
         </School>
         <School
+          className="md:mx-auto"
           name="Saxion University"
           faculty="Erasmus Exchange"
           field="European Project Semester"

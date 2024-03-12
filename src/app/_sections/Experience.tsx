@@ -28,7 +28,7 @@ export default function Experience() {
           students during their Competence Project semester.
         </Job>
         <Job
-          className="mx-auto"
+          className="md:mx-auto"
           role="Freelance Web Developer"
           company="Energenious"
           period="January 2021 - December 2022"
@@ -39,7 +39,7 @@ export default function Experience() {
           spreadsheet widget.
         </Job>
         <Job
-          className="ml-auto"
+          className="md:ml-auto"
           role="Full-stack Intern"
           company="BinarApps"
           period="July 2019 - August 2019"
