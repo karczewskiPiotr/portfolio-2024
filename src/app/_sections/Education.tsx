@@ -17,7 +17,7 @@ export default function Education() {
       >
         Education
       </h2>
-      <ul className="mt-24 space-y-12 ">
+      <ul className="mt-24 space-y-8 md:space-y-12">
         <School
           className="md:mr-auto"
           name="Lodz University of Technology"
