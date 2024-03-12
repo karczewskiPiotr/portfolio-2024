@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${garamond.variable} ${jost.variable} ${GeistSans.variable} mx-auto grid grid-cols-12 grid-rows-[min-content_auto] gap-x-5 p-[4.2vw] pb-16 pt-0`}
       >
-        <div className="grain absolute inset-0 overflow-hidden"></div>
+        <div className="grain pointer-events-none absolute inset-0 overflow-hidden"></div>
         {children}
         <MouseGradient />
       </body>
