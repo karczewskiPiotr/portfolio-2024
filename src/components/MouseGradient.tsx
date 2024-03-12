@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 
 // TODO: Make size viewport dependent
-const RADIUS = 96;
+const RADIUS = 128;
 
 export default function MouseGradient() {
   const ref = useRef<HTMLDivElement>(null);
@@ -33,7 +33,7 @@ export default function MouseGradient() {
   return (
     <div
       ref={ref}
-      className="fixed left-0 top-0 z-[-1] h-48 w-48 rounded-full bg-cyan-950 mix-blend-color blur-[100px]"
+      className="fixed left-0 top-0 z-[-1] h-64 w-64 rounded-full bg-cyan-900 mix-blend-color blur-[100px]"
     ></div>
   );
 }

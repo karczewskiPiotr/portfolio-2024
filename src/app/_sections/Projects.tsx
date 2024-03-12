@@ -28,6 +28,7 @@ import s19 from "../../../public/mgc_3.png";
 
 import s20 from "../../../public/wss.png";
 import s21 from "../../../public/wss_1.png";
+import Line from "@/components/Line";
 
 export default function Projects() {
   return (
@@ -35,15 +36,18 @@ export default function Projects() {
       id="works"
       role="region"
       aria-labelledby="works__header"
-      className="col-span-full mt-96"
+      className=" relative col-span-full mt-64"
     >
+      <div className="bg-dot-white/[0.2] absolute bottom-0 left-1/2 top-16 z-[-5] w-screen -translate-x-1/2">
+        <div className="bg-neutral-925 pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,theme(colors.neutral.925))]"></div>
+      </div>
       <h2
         id="works__header"
-        className="filter-noise font-serif text-var-5xl font-bold leading-[1.5] text-copper-900 opacity-45"
+        className="font-sans text-var-5xl font-bold leading-[1.5] text-neutral-50 "
       >
         Selected Work
       </h2>
-      <ul className="col-span-full mt-24 space-y-24">
+      <ul className="col-span-full mt-24 flex flex-wrap gap-x-8 gap-y-16">
         <Project
           name="Spotkania z Krakowskimi Kawiarniami"
           link="https://kawiarnie.szz.pl/"
@@ -58,6 +62,11 @@ export default function Projects() {
           Scroll-based animations drive the story with text, images and videos
           being the forefront of the experience.
         </Project>
+
+        <li className="flex flex-[1_1_40%]">
+          <Line />
+        </li>
+        <li className="flex flex-[1_1_40%]"></li>
 
         <Project
           name="World of prosperity, dark ages"
@@ -103,6 +112,9 @@ export default function Projects() {
           content, edit and share it.
         </Project>
 
+        <li className="flex flex-[1_1_40%]"></li>
+        <li className="flex flex-[1_1_40%]"></li>
+
         <Project
           name="Model i Metafora"
           link="https://model-i-metafora.vnlab.org/"
@@ -144,6 +156,9 @@ export default function Projects() {
           chapters to accomodate a wide range of content types.
         </Project>
 
+        <li className="flex flex-[1_1_40%]"></li>
+        <li className="flex flex-[1_1_40%]"></li>
+
         <Project
           name="PubLab"
           roles={["Developer"]}
@@ -184,6 +199,9 @@ export default function Projects() {
           simulation engine. Added a visual network map, system graph,
           exportable PDF report, scenario comparison and more.
         </Project>
+
+        <li className="flex flex-[1_1_40%]"></li>
+        <li className="flex flex-[1_1_40%]"></li>
 
         <Project
           name="Web Spreadsheet Widget"

@@ -28,8 +28,8 @@ export default function Landing() {
           >
             Download resume
             <svg
-              width="16"
-              height="16"
+              width="1em"
+              height="13m"
               viewBox="0 0 16 16"
               className="ml-2 inline-block"
             >
