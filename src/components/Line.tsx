@@ -6,8 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
 
 export default function Line(props: { variant: number }) {
-  const glowRef = useRef<SVGPathElement>(null);
-  const fillRef = useRef<SVGPathElement>(null);
+  const ref = useRef<SVGGElement>(null);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -17,18 +16,20 @@ export default function Line(props: { variant: number }) {
     const mm = gsap.matchMedia();
 
     mm.add("(min-width: 1024px)", () => {
-      if (!glowRef.current || !fillRef.current) return;
+      if (!ref.current) return;
 
-      const length = Math.ceil(glowRef.current.getTotalLength());
+      const length = Math.ceil(
+        (ref.current.firstChild as SVGPathElement)!.getTotalLength(),
+      );
 
-      gsap.set([glowRef.current, fillRef.current], {
+      gsap.set(ref.current, {
         strokeDasharray: length,
         strokeDashoffset: length,
       });
 
       const timeline = gsap.timeline({
         scrollTrigger: {
-          trigger: glowRef.current,
+          trigger: ref.current,
           start: "top center",
           end: "bottom center",
           scrub: 2,
@@ -37,12 +38,12 @@ export default function Line(props: { variant: number }) {
       });
 
       timeline.fromTo(
-        [glowRef.current, fillRef.current],
+        ref.current,
         { strokeDashoffset: length },
         { strokeDashoffset: 0 },
       );
 
-      gsap.to([glowRef.current, fillRef.current], {
+      gsap.to(ref.current, {
         keyframes: NEON_KEYFRAMES,
         repeat: -1,
         duration: 7,
@@ -77,17 +78,14 @@ export default function Line(props: { variant: number }) {
         </filter>
       </defs>
       <path d={PATHS[props.variant]} className="stroke-neutral-500" />
-      <path
-        ref={glowRef}
-        d={PATHS[props.variant]}
-        className="neon stroke-cyan-200"
-        filter="url(#glow)"
-      />
-      <path
-        ref={fillRef}
-        d={PATHS[props.variant]}
-        className="neon stroke-cyan-200"
-      />
+      <g ref={ref}>
+        <path
+          d={PATHS[props.variant]}
+          className="neon stroke-cyan-200"
+          filter="url(#glow)"
+        />
+        <path d={PATHS[props.variant]} className="neon stroke-cyan-200" />
+      </g>
     </svg>
   );
 }
