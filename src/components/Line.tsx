@@ -14,53 +14,54 @@ export default function Line(props: { variant: number }) {
   });
 
   useGSAP(() => {
-    if (!glowRef.current || !fillRef.current) return;
+    const mm = gsap.matchMedia();
 
-    const length = Math.ceil(glowRef.current.getTotalLength());
+    mm.add("(min-width: 1024px)", () => {
+      if (!glowRef.current || !fillRef.current) return;
 
-    gsap.set([glowRef.current, fillRef.current], {
-      strokeDasharray: length,
-      strokeDashoffset: length,
-    });
+      const length = Math.ceil(glowRef.current.getTotalLength());
 
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: glowRef.current,
-        start: "top center",
-        end: "bottom center",
-        scrub: 2,
-        immediateRender: false,
-      },
-    });
+      gsap.set([glowRef.current, fillRef.current], {
+        strokeDasharray: length,
+        strokeDashoffset: length,
+      });
 
-    timeline.fromTo(
-      [glowRef.current, fillRef.current],
-      { strokeDashoffset: length },
-      { strokeDashoffset: 0 },
-    );
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: glowRef.current,
+          start: "top center",
+          end: "bottom center",
+          scrub: 2,
+          immediateRender: false,
+        },
+      });
 
-    const tween = gsap.to([glowRef.current, fillRef.current], {
-      keyframes: NEON_KEYFRAMES,
-      repeat: -1,
-      duration: 7,
-      ease: "none",
-      delay: props.variant % 2,
+      timeline.fromTo(
+        [glowRef.current, fillRef.current],
+        { strokeDashoffset: length },
+        { strokeDashoffset: 0 },
+      );
+
+      gsap.to([glowRef.current, fillRef.current], {
+        keyframes: NEON_KEYFRAMES,
+        repeat: -1,
+        duration: 7,
+        ease: "none",
+        delay: props.variant % 2,
+      });
     });
 
     return () => {
-      timeline.kill();
-      tween.kill();
+      mm.kill();
     };
   });
 
   return (
     <svg
-      height="auto"
-      width="100%"
       viewBox="0 0 400 256"
       preserveAspectRatio="none"
       fill="none"
-      className="overflow-visible"
+      className="h-auto w-full overflow-visible max-xl:mt-auto"
     >
       <defs>
         <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">

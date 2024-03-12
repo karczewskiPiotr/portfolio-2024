@@ -42,9 +42,9 @@ export default function Project(props: Props) {
   return (
     <li
       ref={ref}
-      className="flex h-fit flex-[1_1_40%] font-sans text-var-base opacity-0 max-lg:flex-col-reverse xl:text-var-lg "
+      className="flex h-fit flex-[1_1_40%] font-sans text-var-base opacity-0 max-lg:flex-[1_1_100%] max-md:flex-col  xl:text-var-lg "
     >
-      <div className="relative h-fit flex-[1] overflow-hidden rounded-xl">
+      <div className="fade-bottom relative h-fit flex-[1] overflow-hidden rounded-xl max-md:z-[-1] max-md:-mb-32 max-md:w-full">
         <Image
           src={props.backgroundImage}
           alt="Background"
@@ -60,7 +60,7 @@ export default function Project(props: Props) {
           />
         ))}
       </div>
-      <div className="flex flex-[2] flex-col px-4 max-lg:mt-8 md:max-xl:relative">
+      <div className="flex flex-[2] flex-col px-4 max-md:mt-8  md:max-xl:relative">
         <a href={props.link} target="_blank" className="group w-fit pr-8">
           <h3 className="text-var-lg font-medium text-neutral-50 xl:text-var-base">
             {props.name}{" "}

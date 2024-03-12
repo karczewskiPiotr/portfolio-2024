@@ -63,10 +63,10 @@ export default function Projects() {
           being the forefront of the experience.
         </Project>
 
-        <li className="flex flex-[1_1_40%]" aria-hidden="true">
+        <li className="flex flex-[1_1_40%] max-lg:hidden" aria-hidden="true">
           <Line variant={0} />
         </li>
-        <li className="flex flex-[1_1_40%]" aria-hidden="true">
+        <li className="flex flex-[1_1_40%] max-lg:hidden" aria-hidden="true">
           <Line variant={1} />
         </li>
 
@@ -114,10 +114,10 @@ export default function Projects() {
           content, edit and share it.
         </Project>
 
-        <li className="flex flex-[1_1_40%]" aria-hidden="true">
+        <li className="flex flex-[1_1_40%] max-lg:hidden" aria-hidden="true">
           <Line variant={2} />
         </li>
-        <li className="flex flex-[1_1_40%]" aria-hidden="true">
+        <li className="flex flex-[1_1_40%] max-lg:hidden" aria-hidden="true">
           <Line variant={3} />
         </li>
 
@@ -162,10 +162,10 @@ export default function Projects() {
           chapters to accomodate a wide range of content types.
         </Project>
 
-        <li className="flex flex-[1_1_40%]" aria-hidden="true">
+        <li className="flex flex-[1_1_40%] max-lg:hidden" aria-hidden="true">
           <Line variant={4} />
         </li>
-        <li className="flex flex-[1_1_40%]" aria-hidden="true">
+        <li className="flex flex-[1_1_40%] max-lg:hidden" aria-hidden="true">
           <Line variant={5} />
         </li>
 
@@ -210,10 +210,10 @@ export default function Projects() {
           exportable PDF report, scenario comparison and more.
         </Project>
 
-        <li className="flex flex-[1_1_40%]">
+        <li className="flex flex-[1_1_40%] max-lg:hidden">
           <Line variant={6} />
         </li>
-        <li className="flex flex-[1_1_40%]"></li>
+        <li className="flex flex-[1_1_40%] max-lg:hidden"></li>
 
         <Project
           name="Web Spreadsheet Widget"
