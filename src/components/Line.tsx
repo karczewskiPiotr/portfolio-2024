@@ -33,7 +33,6 @@ export default function Line(props: { variant: number }) {
           end: "bottom center",
           scrub: 2,
           invalidateOnRefresh: true,
-          markers: true,
         },
       });
 
