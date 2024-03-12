@@ -100,6 +100,26 @@ html {
   animation: breathe 5000ms ease-in-out infinite;
 }
 
+.blob-2::before {
+  transform: translateZ(0);
+  position: absolute;
+  content: "";
+  z-index: -1;
+  bottom: -60%;
+  left: -50%;
+  height: 80vh;
+  aspect-ratio: 1/1;
+  width: auto;
+  mix-blend-mode: screen;
+  background:
+    var(--grain),
+    radial-gradient(#155e75 65%, #083344 80%, #c1f1ff 110%) no-repeat,
+    radial-gradient(closest-side, #164e63 0%, #000 100%) no-repeat;
+  background-size: 140px, 100%, cover;
+  background-blend-mode: overlay;
+  /* filter: blur(200px); */
+}
+
 @keyframes breathe {
   0% {
     opacity: 0.4;
@@ -125,4 +145,15 @@ html {
       transparent 100%
     );
   }
+}
+
+.fade-strip {
+  @apply rounded-3xl border-b border-l border-t border-neutral-500 bg-neutral-800 backdrop-blur-sm;
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  mask-image: linear-gradient(
+    to right,
+    rgba(38, 38, 38, 1) 0%,
+    transparent 100%
+  );
 }

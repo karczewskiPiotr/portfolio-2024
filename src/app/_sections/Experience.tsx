@@ -6,15 +6,15 @@ export default function Experience() {
       role="region"
       aria-labelledby="experience__header"
       id="experience"
-      className="col-span-full mt-32"
+      className="grain relative col-span-full mt-32"
     >
       <h2
         id="experience__header"
-        className="filter-noise font-serif text-var-5xl font-bold leading-[1.5] text-copper-900 opacity-45"
+        className="font-sans text-var-5xl font-bold leading-[1.5] text-neutral-50"
       >
         Experience
       </h2>
-      <ul className="mt-24 space-y-12 lg:w-[45%]">
+      <ul className="mt-24 flex flex-col space-y-8 md:space-y-12">
         <Job
           role="Full-stack Developer"
           company="vnLab"
@@ -28,8 +28,9 @@ export default function Experience() {
           students during their Competence Project semester.
         </Job>
         <Job
+          className="mx-auto"
           role="Freelance Web Developer"
-          company="Enegenious"
+          company="Energenious"
           period="January 2021 - December 2022"
           location="Remote/Berlin, Germany"
         >
@@ -38,6 +39,7 @@ export default function Experience() {
           spreadsheet widget.
         </Job>
         <Job
+          className="ml-auto"
           role="Full-stack Intern"
           company="BinarApps"
           period="July 2019 - August 2019"
