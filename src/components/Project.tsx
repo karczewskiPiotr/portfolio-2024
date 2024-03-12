@@ -42,9 +42,9 @@ export default function Project(props: Props) {
   return (
     <li
       ref={ref}
-      className="flex flex-[1_1_40%] font-sans text-var-base opacity-0 max-lg:flex-col-reverse xl:text-var-lg "
+      className="flex h-fit flex-[1_1_40%] font-sans text-var-base opacity-0 max-lg:flex-col-reverse xl:text-var-lg "
     >
-      <div className="relative flex-[1]">
+      <div className="relative h-fit flex-[1] overflow-hidden rounded-xl">
         <Image
           src={props.backgroundImage}
           alt="Background"
@@ -61,8 +61,6 @@ export default function Project(props: Props) {
         ))}
       </div>
       <div className="flex flex-[2] flex-col px-4 max-lg:mt-8 md:max-xl:relative">
-        {/* <div className="absolute bottom-0 right-0 top-0 hidden w-px bg-black lg:max-xl:block"></div> */}
-
         <a href={props.link} target="_blank" className="group w-fit pr-8">
           <h3 className="text-var-lg font-medium text-neutral-50 xl:text-var-base">
             {props.name}{" "}
@@ -81,30 +79,10 @@ export default function Project(props: Props) {
         <p className="mt-1 pr-8 font-sans text-var-xs text-cyan-200">
           {props.client}
         </p>
-        {/* <div className=" mb-4 mt-2 h-px w-full bg-black" /> */}
         <p className="mt-4 max-w-[45ch] text-var-sm font-light text-neutral-50">
           {props.children}
         </p>
-        {/* <ul className="mt-2 flex pr-8">
-          {props.roles.map((role, index) => (
-            <li
-              key={role}
-              className="mb-2 mr-3 flex items-center rounded-xl bg-cyan-200/45 px-2 py-1 text-var-xs text-neutral-50"
-            >
-              {role}
-              {props.roles.length - 1 !== index && (
-                <div className="mx-auto ml-3 h-1 w-1 rounded-full bg-black-950" />
-              )}
-            </li>
-          ))}
-        </ul> */}
-        {/* <div className="mb-4 mt-8 flex items-center justify-start">
-          <h4 className="my-[-0.25em] mr-3 font-sans text-var-xs font-medium uppercase leading-[0] text-black-950">
-            Technologies
-          </h4>
-          <div className="mr-3 h-1 w-1 rounded-full bg-black-950" />
-          <div className="h-px flex-auto bg-black " />
-        </div> */}
+
         <ul className="mt-4 flex flex-wrap ">
           {props.roles.map((role, index) => (
             <li
@@ -120,9 +98,6 @@ export default function Project(props: Props) {
               className="mb-2 mr-3 flex items-center rounded-xl bg-cyan-950/45 px-2 py-1 text-var-xs text-neutral-50"
             >
               {technology}
-              {/* {props.technologies.length - 1 !== index && (
-                <div className="mx-auto ml-3 h-1 w-1 rounded-full bg-black-950" />
-              )} */}
             </li>
           ))}
         </ul>

@@ -25,7 +25,7 @@ export default function Navigation() {
     >
       <a
         data-animate="fade"
-        className="mr-[2px] font-sans text-var-base font-bold leading-none text-neutral-500 opacity-0 transition-colors duration-500 hover:text-cyan-200 focus:text-cyan-200"
+        className="mr-[2px] font-sans text-var-sm font-bold leading-none text-neutral-500 opacity-0 transition-colors duration-500 hover:text-cyan-200 focus:text-cyan-200"
         href="#works"
       >
         selected work
@@ -36,7 +36,7 @@ export default function Navigation() {
       />
       <a
         data-animate="fade"
-        className="mr-[2px] font-sans text-var-base font-bold leading-none text-neutral-500 opacity-0 transition-colors duration-500 hover:text-cyan-200 focus:text-cyan-200"
+        className="mr-[2px] font-sans text-var-sm font-bold leading-none text-neutral-500 opacity-0 transition-colors duration-500 hover:text-cyan-200 focus:text-cyan-200"
         href="#experience"
       >
         experience
@@ -47,7 +47,7 @@ export default function Navigation() {
       />
       <a
         data-animate="fade"
-        className="mr-[2px] font-sans text-var-base font-bold leading-none text-neutral-500 opacity-0 transition-colors duration-500 hover:text-cyan-200 focus:text-cyan-200"
+        className="mr-[2px] font-sans text-var-sm font-bold leading-none text-neutral-500 opacity-0 transition-colors duration-500 hover:text-cyan-200 focus:text-cyan-200"
         href="#education"
       >
         education

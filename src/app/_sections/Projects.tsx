@@ -38,8 +38,8 @@ export default function Projects() {
       aria-labelledby="works__header"
       className=" relative col-span-full mt-64"
     >
-      <div className="bg-dot-white/[0.2] absolute bottom-0 left-1/2 top-16 z-[-5] w-screen -translate-x-1/2">
-        <div className="bg-neutral-925 pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,theme(colors.neutral.925))]"></div>
+      <div className="absolute bottom-0 left-1/2 top-16 z-[-5] w-screen -translate-x-1/2 bg-dot-white/[0.2]">
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-neutral-925 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,theme(colors.neutral.925))]"></div>
       </div>
       <h2
         id="works__header"
@@ -63,10 +63,12 @@ export default function Projects() {
           being the forefront of the experience.
         </Project>
 
-        <li className="flex flex-[1_1_40%]">
-          <Line />
+        <li className="flex flex-[1_1_40%]" aria-hidden="true">
+          <Line variant={0} />
         </li>
-        <li className="flex flex-[1_1_40%]"></li>
+        <li className="flex flex-[1_1_40%]" aria-hidden="true">
+          <Line variant={1} />
+        </li>
 
         <Project
           name="World of prosperity, dark ages"
@@ -112,8 +114,12 @@ export default function Projects() {
           content, edit and share it.
         </Project>
 
-        <li className="flex flex-[1_1_40%]"></li>
-        <li className="flex flex-[1_1_40%]"></li>
+        <li className="flex flex-[1_1_40%]" aria-hidden="true">
+          <Line variant={2} />
+        </li>
+        <li className="flex flex-[1_1_40%]" aria-hidden="true">
+          <Line variant={3} />
+        </li>
 
         <Project
           name="Model i Metafora"
@@ -156,8 +162,12 @@ export default function Projects() {
           chapters to accomodate a wide range of content types.
         </Project>
 
-        <li className="flex flex-[1_1_40%]"></li>
-        <li className="flex flex-[1_1_40%]"></li>
+        <li className="flex flex-[1_1_40%]" aria-hidden="true">
+          <Line variant={4} />
+        </li>
+        <li className="flex flex-[1_1_40%]" aria-hidden="true">
+          <Line variant={5} />
+        </li>
 
         <Project
           name="PubLab"
@@ -200,7 +210,9 @@ export default function Projects() {
           exportable PDF report, scenario comparison and more.
         </Project>
 
-        <li className="flex flex-[1_1_40%]"></li>
+        <li className="flex flex-[1_1_40%]">
+          <Line variant={6} />
+        </li>
         <li className="flex flex-[1_1_40%]"></li>
 
         <Project
