@@ -11,6 +11,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        "3xl": "2560px",
+      },
       colors: {
         neutral: {
           925: "rgb(20 20 20 / <alpha-value>)",
@@ -29,8 +32,11 @@ const config: Config = {
         serif: ["var(--font-garamond)"],
       },
       fontSize: {
+        "var-9xl": ["clamp(theme(fontSize.9xl),7vw,10vw)", "1"],
+        "var-7xl": ["clamp(theme(fontSize.7xl),8vw,10vw)", "1"],
         "var-5xl": ["clamp(theme(fontSize.5xl),8vw,8vw)", "1.5"],
         "var-4xl": ["clamp(theme(fontSize.4xl),8vw,8vw)", "1.1"],
+        "var-2xl": ["clamp(theme(fontSize.2xl),1.35vw,100vw)", "1.33"],
         "var-xl": ["clamp(theme(fontSize.xl),1.31vw,100vw)", "1.5"],
         "var-lg": ["clamp(theme(fontSize.lg),1.18vw,1.2vw)", "1.5"],
         "var-md": ["clamp(44px,8vw,8vw)", "1.1"],

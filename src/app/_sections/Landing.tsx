@@ -4,10 +4,10 @@ export default function Landing() {
   return (
     <>
       <div className="col-span-full mt-12">
-        <h2 className="mb-2 ml-2 font-sans text-2xl font-medium text-cyan-200 max-lg:text-center">
+        <h2 className="mb-2 ml-2 font-sans text-var-2xl font-medium text-cyan-200 max-lg:text-center">
           Piotr Karczewski
         </h2>
-        <h1 className="font-sans text-9xl font-bold text-neutral-50 max-lg:text-center max-lg:text-7xl max-md:text-5xl">
+        <h1 className="md:text-var-7xl font-sans text-5xl font-bold text-neutral-50 max-lg:text-center lg:text-var-9xl">
           Full-stack Web
           <br />
           Developer
