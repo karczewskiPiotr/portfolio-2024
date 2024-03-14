@@ -116,18 +116,19 @@ html {
     radial-gradient(closest-side, #164e63 0%, #000 100%) no-repeat;
   background-size: 140px, 100%, cover;
   background-blend-mode: overlay;
-  /* filter: blur(200px); */
 }
 
-@keyframes breathe {
-  0% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.4;
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes breathe {
+    0% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.4;
+    }
   }
 }
 

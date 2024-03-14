@@ -12,50 +12,59 @@ export default function Line(props: { variant: number }) {
     gsap.registerPlugin(ScrollTrigger);
   }, []);
 
-  useGSAP(() => {
-    const mm = gsap.matchMedia();
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia();
+      const conditions = {
+        isLg: "(min-width: 1024px)",
+        prefersMotion: "(prefers-reduced-motion: no-preference)",
+        preferesReducedMotion: "(prefers-reduced-motion: reduce)",
+      };
 
-    mm.add("(min-width: 1024px)", () => {
-      if (!ref.current) return;
+      mm.add(conditions, (context) => {
+        if (!context.conditions) {
+          throw new Error("No media query conditions provided.");
+        }
 
-      const length = Math.ceil(
-        (ref.current.firstChild as SVGPathElement)!.getTotalLength(),
-      );
+        const { preferesReducedMotion, isLg } = context.conditions;
+        if (preferesReducedMotion || !isLg || !ref.current) return;
 
-      gsap.set(ref.current, {
-        strokeDasharray: length,
-        strokeDashoffset: length,
+        const length = Math.ceil(
+          (ref.current.firstChild as SVGPathElement)!.getTotalLength(),
+        );
+
+        gsap.set(ref.current, {
+          strokeDasharray: length,
+          strokeDashoffset: length,
+        });
+
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: ref.current,
+            start: "top center",
+            end: "bottom center",
+            scrub: 2,
+            invalidateOnRefresh: true,
+          },
+        });
+
+        timeline.fromTo(
+          ref.current,
+          { strokeDashoffset: length },
+          { strokeDashoffset: 0 },
+        );
+
+        gsap.to(ref.current, {
+          keyframes: NEON_KEYFRAMES,
+          repeat: -1,
+          duration: 7,
+          ease: "none",
+          delay: props.variant % 2,
+        });
       });
-
-      const timeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: ref.current,
-          start: "top center",
-          end: "bottom center",
-          scrub: 2,
-          invalidateOnRefresh: true,
-        },
-      });
-
-      timeline.fromTo(
-        ref.current,
-        { strokeDashoffset: length },
-        { strokeDashoffset: 0 },
-      );
-
-      gsap.to(ref.current, {
-        keyframes: NEON_KEYFRAMES,
-        repeat: -1,
-        duration: 7,
-        ease: "none",
-        delay: props.variant % 2,
-      });
-    });
-
-    return () => {
-      mm.kill();
-    };
-  });
+    },
+    { scope: ref },
+  );
 
   return (
     <svg

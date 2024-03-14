@@ -25,24 +25,39 @@ export default function Project(props: Props) {
   }, []);
 
   useGSAP(() => {
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: ref.current,
-        start: "25% bottom",
-      },
-    });
+    const mm = gsap.matchMedia();
+    const conditions = {
+      prefersMotion: "(prefers-reduced-motion: no-preference)",
+      preferesReducedMotion: "(prefers-reduced-motion: reduce)",
+    };
 
-    timeline.fromTo(
-      ref.current,
-      { opacity: 0, translateY: 48 },
-      { opacity: 1, translateY: 0, ease: "power1.out", duration: 1 },
-    );
+    mm.add(conditions, (context) => {
+      if (!context.conditions) {
+        throw new Error("No media query conditions provided.");
+      }
+
+      if (context.conditions.preferesReducedMotion) return;
+
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: ref.current,
+          start: "25% bottom",
+          invalidateOnRefresh: true,
+        },
+      });
+
+      timeline.fromTo(
+        ref.current,
+        { opacity: 0, translateY: 48 },
+        { opacity: 1, translateY: 0, ease: "power1.out", duration: 1 },
+      );
+    });
   });
 
   return (
     <li
       ref={ref}
-      className="flex h-fit flex-[1_1_40%] font-sans text-var-base opacity-0 max-lg:flex-[1_1_100%] max-md:flex-col  xl:text-var-lg "
+      className="flex h-fit flex-[1_1_40%] font-sans text-var-base motion-safe:opacity-0 max-lg:flex-[1_1_100%] max-md:flex-col xl:text-var-lg "
     >
       <div className="fade-bottom relative h-fit flex-[1] overflow-hidden rounded-xl max-md:z-[-1] max-md:-mb-32 max-md:w-full">
         <Image

@@ -9,11 +9,25 @@ export default function Navigation() {
 
   useGSAP(
     () => {
-      gsap.fromTo(
-        "[data-animate='fade']",
-        { opacity: 0, translateY: -10 },
-        { opacity: 1, translateY: 0, stagger: 0.1 },
-      );
+      const mm = gsap.matchMedia();
+      const conditions = {
+        prefersMotion: "(prefers-reduced-motion: no-preference)",
+        preferesReducedMotion: "(prefers-reduced-motion: reduce)",
+      };
+
+      mm.add(conditions, (context) => {
+        if (!context.conditions) {
+          throw new Error("No media query conditions provided.");
+        }
+
+        if (context.conditions.preferesReducedMotion) return;
+
+        gsap.fromTo(
+          "[data-animate='fade']",
+          { opacity: 0, translateY: -10 },
+          { opacity: 1, translateY: 0, stagger: 0.1 },
+        );
+      });
     },
     { scope: nav },
   );
@@ -21,33 +35,33 @@ export default function Navigation() {
   return (
     <nav
       ref={nav}
-      className="col-start-2 col-end-8 flex h-fit w-fit flex-row items-center space-x-2 py-4 max-md:hidden"
+      className="z-0 col-start-2 col-end-8 flex h-fit w-fit flex-row items-center space-x-2 py-4 max-md:hidden"
     >
       <a
         data-animate="fade"
-        className="mr-[2px] font-sans text-var-sm font-bold leading-none text-neutral-500 opacity-0 transition-colors duration-500 hover:text-cyan-200 focus:text-cyan-200"
+        className="mr-[2px] font-sans text-var-sm font-bold leading-none text-neutral-500 transition-colors duration-500 hover:text-cyan-200 focus:text-cyan-200 motion-safe:opacity-0"
         href="#works"
       >
         selected work
       </a>
       <div
         data-animate="fade"
-        className="mx-auto h-1 w-1 rounded-full bg-neutral-500 opacity-0"
+        className="mx-auto h-1 w-1 rounded-full bg-neutral-500 motion-safe:opacity-0"
       />
       <a
         data-animate="fade"
-        className="mr-[2px] font-sans text-var-sm font-bold leading-none text-neutral-500 opacity-0 transition-colors duration-500 hover:text-cyan-200 focus:text-cyan-200"
+        className="mr-[2px] font-sans text-var-sm font-bold leading-none text-neutral-500 transition-colors duration-500 hover:text-cyan-200 focus:text-cyan-200 motion-safe:opacity-0"
         href="#experience"
       >
         experience
       </a>
       <div
         data-animate="fade"
-        className="mx-auto h-1 w-1 rounded-full bg-neutral-500 opacity-0"
+        className="mx-auto h-1 w-1 rounded-full bg-neutral-500 motion-safe:opacity-0"
       />
       <a
         data-animate="fade"
-        className="mr-[2px] font-sans text-var-sm font-bold leading-none text-neutral-500 opacity-0 transition-colors duration-500 hover:text-cyan-200 focus:text-cyan-200"
+        className="mr-[2px] font-sans text-var-sm font-bold leading-none text-neutral-500 transition-colors duration-500 hover:text-cyan-200 focus:text-cyan-200 motion-safe:opacity-0"
         href="#education"
       >
         education

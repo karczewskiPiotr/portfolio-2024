@@ -9,11 +9,25 @@ export default function Sidebar() {
 
   useGSAP(
     () => {
-      gsap.fromTo(
-        "[data-animate='fade']",
-        { opacity: 0, translateY: -10 },
-        { opacity: 1, translateY: 0, stagger: 0.1, delay: 0.6 },
-      );
+      const mm = gsap.matchMedia();
+      const conditions = {
+        prefersMotion: "(prefers-reduced-motion: no-preference)",
+        preferesReducedMotion: "(prefers-reduced-motion: reduce)",
+      };
+
+      mm.add(conditions, (context) => {
+        if (!context.conditions) {
+          throw new Error("No media query conditions provided.");
+        }
+
+        if (context.conditions.preferesReducedMotion) return;
+
+        gsap.fromTo(
+          "[data-animate='fade']",
+          { opacity: 0, translateY: -10 },
+          { opacity: 1, translateY: 0, stagger: 0.1, delay: 0.6 },
+        );
+      });
     },
     { scope: ref },
   );
@@ -21,13 +35,13 @@ export default function Sidebar() {
   return (
     <div
       ref={ref}
-      className="col-start-8 col-end-12 row-start-1 flex h-fit items-end justify-end space-x-2 py-4 max-md:col-span-full"
+      className="z-0 col-start-8 col-end-12 row-start-1 flex h-fit items-end justify-end space-x-2 py-4 max-md:col-span-full"
     >
       <a
         aria-label="Email"
         data-animate="fade"
         href="mailto:p.karczewsk@gmail.com"
-        className="group inline-flex aspect-square items-center justify-center rounded-full px-2 opacity-0 hover:bg-cyan-950/45 focus:bg-cyan-950/45"
+        className="group inline-flex aspect-square items-center justify-center rounded-full px-2 hover:bg-cyan-950/45 focus:bg-cyan-950/45 motion-safe:opacity-0"
       >
         <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
           <g clipPath="url(#clip0_18_285)">
@@ -48,7 +62,7 @@ export default function Sidebar() {
         data-animate="fade"
         href="/Piotr Karczewski CV.pdf"
         target="_blank"
-        className="group inline-flex aspect-square items-center justify-center rounded-full px-2 opacity-0 hover:bg-cyan-950/45 focus:bg-cyan-950/45"
+        className="group inline-flex aspect-square items-center justify-center rounded-full px-2 hover:bg-cyan-950/45 focus:bg-cyan-950/45 motion-safe:opacity-0"
       >
         <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
           <path
@@ -62,7 +76,7 @@ export default function Sidebar() {
         data-animate="fade"
         href="https://www.linkedin.com/in/piotr-karczewski-94468b2b6/"
         target="_blank"
-        className="group inline-flex aspect-square items-center justify-center rounded-full px-2 opacity-0 hover:bg-cyan-950/45 focus:bg-cyan-950/45"
+        className="group inline-flex aspect-square items-center justify-center rounded-full px-2 hover:bg-cyan-950/45 focus:bg-cyan-950/45 motion-safe:opacity-0"
       >
         <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
           <path
@@ -76,7 +90,7 @@ export default function Sidebar() {
         data-animate="fade"
         href="https://github.com/karczewskiPiotr"
         target="_blank"
-        className="group inline-flex aspect-square items-center justify-center rounded-full px-2 opacity-0 hover:bg-cyan-950/45 focus:bg-cyan-950/45"
+        className="group inline-flex aspect-square items-center justify-center rounded-full px-2 hover:bg-cyan-950/45 focus:bg-cyan-950/45 motion-safe:opacity-0"
       >
         <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
           <path
