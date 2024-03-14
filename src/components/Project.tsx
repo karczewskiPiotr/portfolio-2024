@@ -22,7 +22,7 @@ export default function Project(props: Props) {
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-  });
+  }, []);
 
   useGSAP(() => {
     const timeline = gsap.timeline({
@@ -84,17 +84,17 @@ export default function Project(props: Props) {
         </p>
 
         <ul className="mt-4 flex flex-wrap ">
-          {props.roles.map((role, index) => (
+          {props.roles.map((role) => (
             <li
-              key={role}
+              key={`${role}_${props.name}`}
               className="mb-2 mr-3 flex items-center rounded-xl bg-cyan-600/45 px-2 py-1 text-var-xs text-neutral-50"
             >
               {role}
             </li>
           ))}
-          {props.technologies.map((technology, index) => (
+          {props.technologies.map((technology) => (
             <li
-              key={technology}
+              key={`${technology}_${props.name}`}
               className="mb-2 mr-3 flex items-center rounded-xl bg-cyan-950/45 px-2 py-1 text-var-xs text-neutral-50"
             >
               {technology}

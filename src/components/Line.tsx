@@ -10,7 +10,7 @@ export default function Line(props: { variant: number }) {
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-  });
+  }, []);
 
   useGSAP(() => {
     const mm = gsap.matchMedia();
