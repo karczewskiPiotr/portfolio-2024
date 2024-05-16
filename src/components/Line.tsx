@@ -38,29 +38,36 @@ export default function Line(props: { variant: number }) {
           strokeDashoffset: length,
         });
 
+        const tween = gsap.to(ref.current, {
+          keyframes: NEON_KEYFRAMES,
+          repeat: -1,
+          duration: 7,
+          ease: "none",
+          delay: props.variant % 2,
+          paused: true,
+        });
+
         const timeline = gsap.timeline({
           scrollTrigger: {
             trigger: ref.current,
             start: "top center",
             end: "bottom center",
-            scrub: 2,
+            scrub: 1,
             invalidateOnRefresh: true,
+            once: true,
           },
         });
 
         timeline.fromTo(
           ref.current,
           { strokeDashoffset: length },
-          { strokeDashoffset: 0 },
+          {
+            strokeDashoffset: 0,
+            onComplete: () => {
+              tween.play();
+            },
+          },
         );
-
-        gsap.to(ref.current, {
-          keyframes: NEON_KEYFRAMES,
-          repeat: -1,
-          duration: 7,
-          ease: "none",
-          delay: props.variant % 2,
-        });
       });
     },
     { scope: ref },
