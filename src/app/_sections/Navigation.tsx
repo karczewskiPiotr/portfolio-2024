@@ -3,6 +3,7 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function Navigation() {
   const nav = useRef<HTMLElement>(null);
@@ -37,35 +38,35 @@ export default function Navigation() {
       ref={nav}
       className="z-0 col-start-2 col-end-8 flex h-fit w-fit flex-row items-center space-x-2 py-4 max-md:hidden"
     >
-      <a
+      <Link
         data-animate="fade"
         className="mr-[2px] font-sans text-var-sm font-bold leading-none text-neutral-500 transition-colors duration-500 hover:text-cyan-200 focus:text-cyan-200 motion-safe:opacity-0"
         href="#works"
       >
         selected work
-      </a>
+      </Link>
       <div
         data-animate="fade"
         className="mx-auto h-1 w-1 rounded-full bg-neutral-500 motion-safe:opacity-0"
       />
-      <a
+      <Link
         data-animate="fade"
         className="mr-[2px] font-sans text-var-sm font-bold leading-none text-neutral-500 transition-colors duration-500 hover:text-cyan-200 focus:text-cyan-200 motion-safe:opacity-0"
         href="#experience"
       >
         experience
-      </a>
+      </Link>
       <div
         data-animate="fade"
         className="mx-auto h-1 w-1 rounded-full bg-neutral-500 motion-safe:opacity-0"
       />
-      <a
+      <Link
         data-animate="fade"
         className="mr-[2px] font-sans text-var-sm font-bold leading-none text-neutral-500 transition-colors duration-500 hover:text-cyan-200 focus:text-cyan-200 motion-safe:opacity-0"
         href="#education"
       >
         education
-      </a>
+      </Link>
     </nav>
   );
 }

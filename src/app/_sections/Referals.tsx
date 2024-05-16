@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 
-export default function Sidebar() {
+export default function Referals() {
   const ref = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -35,7 +35,7 @@ export default function Sidebar() {
   return (
     <div
       ref={ref}
-      className="3xl:py-8 z-0 col-start-8 col-end-12 row-start-1 flex h-fit items-end justify-end space-x-2 py-4 max-md:col-span-full"
+      className="z-0 col-start-8 col-end-12 row-start-1 flex h-fit items-end justify-end space-x-2 py-4 max-md:col-span-full 3xl:py-8"
     >
       <a
         aria-label="Email"

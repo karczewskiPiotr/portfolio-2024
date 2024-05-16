@@ -3,7 +3,7 @@ import Experience from "./_sections/Experience";
 import Landing from "./_sections/Landing";
 import Navigation from "./_sections/Navigation";
 import Projects from "./_sections/Projects";
-import Sidebar from "./_sections/Sidebar";
+import Referals from "./_sections/Referals";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       </a>
       <header className="blurred sticky top-0 z-40 col-span-full grid grid-cols-subgrid items-center justify-between">
         <Navigation />
-        <Sidebar />
+        <Referals />
       </header>
       <main className="col-start-2 col-end-12 row-start-2 row-end-[-1] mt-24 grid grid-cols-10 gap-x-5 max-md:col-span-full">
         <div className="blob pointer-events-none absolute inset-0 overflow-hidden"></div>
