@@ -8,6 +8,7 @@ import Image, { StaticImageData } from "next/image";
 import { PropsWithChildren } from "react";
 
 type Props = PropsWithChildren<{
+  id: string;
   name: string;
   roles: string[];
   client: string;
@@ -56,8 +57,9 @@ export default function Project(props: Props) {
 
   return (
     <li
+      id={props.id}
       ref={ref}
-      className="flex h-fit flex-[1_1_40%] font-sans text-var-base motion-safe:opacity-0 max-lg:flex-[1_1_100%] max-md:flex-col xl:text-var-lg "
+      className="flex h-fit flex-[1_1_40%] scroll-m-12 font-sans text-var-base motion-safe:opacity-0 max-lg:flex-[1_1_100%] max-md:flex-col xl:text-var-lg"
     >
       <div className="fade-bottom relative h-fit flex-[1] overflow-hidden rounded-xl max-md:z-[-1] max-md:-mb-32 max-md:w-full">
         <Image

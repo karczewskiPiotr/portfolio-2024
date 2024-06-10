@@ -36,7 +36,7 @@ export default function Projects() {
       id="works"
       role="region"
       aria-labelledby="works__header"
-      className=" relative col-span-full mt-64"
+      className="relative col-span-full mt-64"
     >
       <div className="absolute bottom-0 left-1/2 top-16 z-[-5] w-screen -translate-x-1/2 bg-dot-white/[0.2]">
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-neutral-925 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,theme(colors.neutral.925))]"></div>
@@ -49,7 +49,8 @@ export default function Projects() {
       </h2>
       <ul className="col-span-full mt-24 flex flex-wrap gap-x-8 gap-y-16">
         <Project
-          name="Spotkania z Krakowskimi Kawiarniami"
+          id="kawiarnie"
+          name="Meetings with Cracow Cafes"
           link="https://kawiarnie.szz.pl/"
           roles={["Developer"]}
           technologies={["HTML", "TypeScript", "TailwindCSS", "GSAP", "Vite"]}
@@ -71,6 +72,7 @@ export default function Projects() {
         </li>
 
         <Project
+          id="kryzysy"
           name="World of prosperity, dark ages"
           link="https://kryzysy.vnlab.org/"
           roles={["UI/UX Designer", "Developer"]}
@@ -93,7 +95,9 @@ export default function Projects() {
         </Project>
 
         <Project
+          id="atlas"
           name="Refugee Atlas"
+          link="https://refugee-atlas.vnlab.org/"
           roles={["UX Designer", "Developer"]}
           technologies={[
             "Astro",
@@ -122,7 +126,8 @@ export default function Projects() {
         </li>
 
         <Project
-          name="Model i Metafora"
+          id="model"
+          name="Model and metaphor"
           link="https://model-i-metafora.vnlab.org/"
           roles={["Developer"]}
           technologies={[
@@ -137,12 +142,13 @@ export default function Projects() {
           foregroundImages={[mim_1]}
         >
           Handbook of Visual Communication Design, a reissue of the book
-          &quot;Model i metafora&quot;, available in its entirety online, free
+          &quot;Model and metaphor&quot;, available in its entirety online, free
           of charge. Digital edition brings to life a map of text and includes
           new illustaions and animations.
         </Project>
 
         <Project
+          id="lab"
           name="vnLab Publication Series"
           link="https://archive-as-project.vnlab.org/"
           roles={["Developer"]}
@@ -170,6 +176,7 @@ export default function Projects() {
         </li>
 
         <Project
+          id="publab"
           name="PubLab"
           roles={["Developer"]}
           technologies={[
@@ -189,6 +196,7 @@ export default function Projects() {
         </Project>
 
         <Project
+          id="mgc"
           name="MicrogridCreator"
           link="https://energenious.eu/index.php/mgc/"
           roles={["UI/UX Designer", "Developer"]}
@@ -216,6 +224,7 @@ export default function Projects() {
         <li className="flex flex-[1_1_40%] max-lg:hidden"></li>
 
         <Project
+          id="wss"
           name="Web Spreadsheet Widget"
           link="https://energenious.eu/index.php/mfe/"
           roles={["Developer"]}
