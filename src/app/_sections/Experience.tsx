@@ -23,9 +23,9 @@ export default function Experience() {
         >
           Co-designed and developed online publications, interactive experiences
           and desktop apps. Co-chaired seminars and workshops on the topic of
-          technological approaches to web pubs. Co-facilitated a talk during
-          2023 Mozilla Festival. Project-managed and assisted a class of
-          students during their Competence Project semester.
+          technological approaches to web publications. Co-facilitated a talk
+          during 2023 Mozilla Festival. Supervised and supported a class of
+          students throughout their Competence Project semester.
         </Job>
         <Job
           className="md:mx-auto"
