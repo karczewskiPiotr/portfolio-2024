@@ -74,7 +74,7 @@ export default function Projects() {
         <Project
           id="kryzysy"
           name="World of prosperity, dark ages"
-          link="https://kryzysy.vnlab.org/"
+          link="https://kryzysy.vnlab.org/en/"
           roles={["UI/UX Designer", "Developer"]}
           technologies={[
             "Astro",
