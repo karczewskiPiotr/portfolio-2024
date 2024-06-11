@@ -24,7 +24,7 @@ export default function Education() {
           faculty="International Faculty of Engineering"
           field="Information Technology"
           degree="Bachelor of Engineering"
-          period="September 2018 - February 2021"
+          period="October 2017 - February 2021"
           location="Lodz, Poland"
         >
           Worked in a group of international students to create an educational

@@ -18,7 +18,7 @@ export default function Job(props: Props) {
         {props.role}{" "}
         <span className="text-var-xs text-cyan-200">at {props.company}</span>
       </h3>
-      <div className="mb-4 mt-1 flex items-center text-var-xs text-neutral-400">
+      <div className="mb-4 mt-1 flex flex-wrap items-center text-var-xs text-neutral-400">
         <p>{props.period}</p>
         <div className="mx-2 inline-block h-1 w-1 rounded-full bg-neutral-400 " />
         <p>{props.location}</p>
