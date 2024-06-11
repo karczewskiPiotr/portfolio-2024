@@ -7,7 +7,7 @@ export default function Landing() {
         <h2 className="mb-2 ml-2 font-sans text-var-2xl font-medium text-cyan-200 max-lg:text-center">
           Piotr Karczewski
         </h2>
-        <h1 className="md:text-var-7xl font-sans text-5xl font-bold text-neutral-50 max-lg:text-center lg:text-var-9xl">
+        <h1 className="font-sans text-5xl font-bold text-neutral-50 max-lg:text-center md:text-var-7xl lg:text-var-9xl">
           Full-stack Web
           <br />
           Developer
@@ -15,7 +15,7 @@ export default function Landing() {
       </div>
       <section className="col-span-full mt-8">
         <p className="font-sans text-var-lg font-light text-neutral-50 max-lg:mx-auto max-lg:text-center md:max-w-[45ch]">
-          I’m a full-stack web developer with 3+ years of experience creating
+          I’m a full-stack web developer with four years of experience creating
           and maintaining data-driven single-page client apps, micro-frontend
           widgets and interactive web experiences.
         </p>
