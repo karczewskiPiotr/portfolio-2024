@@ -29,7 +29,7 @@ export default function Experience() {
         </Job>
         <Job
           className="md:mx-auto"
-          role="Freelance Web Developer"
+          role="Front-end Developer"
           company="Energenious"
           period="January 2021 - December 2022"
           location="Remote/Berlin, Germany"
